@@ -1,0 +1,107 @@
+.c-form {
+    margin-top: 40px;
+
+    .form-heading {
+        color: $primary90;
+        margin: 20px 0;
+
+        h3 {
+            margin-bottom: 6px;
+        }
+    }
+
+    label {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input,
+    textarea {
+        font-family: inherit;
+        width: 100%;
+        outline: none;
+        border: 1px solid $primary90;
+
+        &:focus {
+            border-color: $primary50;
+        }
+
+        &::placeholder {
+            color: $default50;
+            transition: all .2s ease;
+
+        }
+
+        &:focus {
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+    }
+
+    input {
+        padding: 18px 36px 18px 18px;
+
+    }
+
+    textarea {
+        padding: 18px 36px 18px 18px;
+        resize: none;
+        min-height: 120px;
+    }
+
+    label::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 8px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 24px;
+        height: 24px;
+        z-index: 10;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .name-label::before {
+        background-image: url('../../assets/icons/person.svg');
+    }
+
+    .phone-label::before {
+        background-image: url('../../assets/icons/phone.svg');
+    }
+
+    .email-label::before {
+        background-image: url('../../assets/icons/email.svg');
+    }
+
+    .message-label::before {
+        top: 8px;
+        margin: unset;
+        bottom: unset;
+        background-image: url('../../assets/icons/message.svg');
+    }
+}
+
+.form-hint {
+    color: $default50;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.two-inputs-holder {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    @media (min-width:768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+}

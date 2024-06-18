@@ -1,0 +1,40 @@
+.c-section-heading {
+    h2 {
+        font-size: 32px;
+        line-height: 120%;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 140%;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media (min-width:992px) {
+            font-size: 18px;
+        }
+    }
+
+    &.al-left {
+        h2 {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    &.dark {
+
+        h2,
+        p {
+            color: $darkBlueColor;
+        }
+    }
+}

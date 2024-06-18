@@ -1,0 +1,98 @@
+$slideExtraMargin: 40px;
+
+:root {
+    --swiper-navigation-color: #8DB9D8;
+    --swiper-pagination-color: #D9E8F2;
+    --swiper-pagination-bullet-inactive-color: #8E94A4
+}
+
+.swiper-outer {
+    padding: 0 20px;
+
+}
+
+.swiper {
+
+    .swiper-slide {
+        height: auto;
+        display: flex;
+    }
+
+}
+
+.swiper-button.swiper-button-prev,
+.swiper-button.swiper-button-next {
+    top: calc(50% + $slideExtraMargin);
+}
+
+.c-feedback {
+    position: relative;
+    /* Це необхідно для відносного позиціонування псевдоелемента */
+    padding: 24px 10px;
+    background-color: $primary70;
+    margin: $slideExtraMargin auto 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width:768px) {
+        padding: 40px 20px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $primary10;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+        z-index: 100;
+    }
+
+    &::after {
+        position: absolute;
+        content: '\275D';
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $primary70;
+        z-index: 100;
+        font-size: 54px;
+    }
+
+    @media (min-width:768px) {
+        padding: 40px 20px;
+
+        &::before {
+            top: -30px;
+            width: 60px;
+            height: 60px;
+        }
+
+        &::after {
+            top: -30px;
+            font-size: 60px;
+        }
+    }
+
+
+    p {
+        color: $default0;
+        font-size: 16px;
+        line-height: 120%;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    h3 {
+        margin: auto 0 0;
+        color: $default0;
+        text-align: center;
+    }
+}
