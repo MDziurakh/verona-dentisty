@@ -56,12 +56,13 @@ $slideExtraMargin: 40px;
     &::after {
         position: absolute;
         content: '\275D';
-        top: -30px;
+        top: -10px;
         left: 50%;
         transform: translateX(-50%);
         color: $primary70;
         z-index: 100;
-        font-size: 54px;
+        font-size: 50px;
+        line-height: 40px;
     }
 
     @media (min-width:768px) {

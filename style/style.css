@@ -381,12 +381,13 @@ h1 {
 .c-feedback::after {
   position: absolute;
   content: "❝";
-  top: -30px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   color: #275372;
   z-index: 100;
-  font-size: 54px;
+  font-size: 50px;
+  line-height: 40px;
 }
 @media (min-width: 768px) {
   .c-feedback {

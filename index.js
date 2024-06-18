@@ -1,16 +1,17 @@
-// Отримуємо елемент хедера
-const header = document.querySelector("header");
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
 
-// Додаємо подію прокрутки
-window.addEventListener("scroll", () => {
-  // Перевіряємо, чи проскролено сторінку більше ніж на 20px
-  if (window.scrollY > 20) {
-    // Додаємо клас, якщо проскролено більше 20px
-    header.classList.add("scrolled");
-  } else {
-    // Видаляємо клас, якщо проскролено менше або дорівнює 20px
-    header.classList.remove("scrolled");
-  }
+  const checkScroll = () => {
+    if (window.scrollY > 20) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  };
+
+  window.addEventListener("scroll", checkScroll);
+
+  checkScroll();
 });
 
 const swiper = new Swiper(".swiper", {
@@ -18,9 +19,9 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   spaceBetween: 20,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
 
   pagination: {
     el: ".swiper-pagination",
