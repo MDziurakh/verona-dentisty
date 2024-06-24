@@ -1,9 +1,10 @@
 .s-hero {
-    height: 100vh;
-    max-height: 1080px;
+    height: calc(100vh - $headerHeight);
+    max-height: 1280px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     position: relative;
     padding-top: $headerHeight;
     display: flex;
@@ -14,8 +15,8 @@
         display: block;
         height: 100%;
         width: 100%;
-        background: linear-gradient(105deg, rgb(255 255 255 / 61%) 13%, rgba(254, 255, 255, 0) 100%);
-        z-index: 11;
+        background-color: rgba(9, 11, 66, 0.375);
+        z-index: 0;
         position: absolute;
         left: 0;
         top: 0;
@@ -24,23 +25,64 @@
 
 .hero-cta {
     position: relative;
+    margin: 0 auto;
     z-index: 100;
-    max-width: 80%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    ;
+    z-index: 10;
+    max-width: max-content;
 
     p {
-        font-size: 26px;
+        font-size: 16px;
         line-height: 120%;
         color: $darkBlueColor;
-        margin-bottom: 20px;
-        font-weight: 700;
+        margin-bottom: 40px;
+        font-weight: 500;
+
+        @media (min-width:768px) {
+            font-size: 18px;
+        }
+
+        @media (min-width:992px) {
+            font-size: 22px;
+        }
+
+        @media (min-width:1240px) {
+            font-size: 26px;
+        }
+    }
+
+    @media (min-width:768px) {
+        padding: 40px;
+    }
+
+    @media (min-width:992px) {
+        padding: 60px;
+    }
+
+    @media (min-width:1240px) {
+        padding: 80px;
     }
 
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 32px;
     line-height: 120%;
     color: $darkBlueColor;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 700;
+
+    @media (min-width:768px) {
+        font-size: 42px;
+    }
+
+    @media (min-width:992px) {
+        font-size: 48px;
+    }
+
+    @media (min-width:1240px) {
+        font-size: 56px;
+    }
 }

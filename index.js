@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
   const checkScroll = () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 20 && !header.classList.contains("scrolled")) {
       header.classList.add("scrolled");
-    } else {
+      mobileMenu.classList.add("scrolled");
+    } else if (window.scrollY < 20 && header.classList.contains("scrolled")) {
       header.classList.remove("scrolled");
+      mobileMenu.classList.remove("scrolled");
     }
   };
 
@@ -13,6 +16,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkScroll();
 });
+
+const mobileMenu = document.querySelector(".mobile-menu");
+const burgers = document.querySelectorAll(".burger-contain");
+if (burgers)
+  burgers.forEach((burger) =>
+    burger.addEventListener("click", (e) => {
+      e.preventDefault();
+      mobileMenu.classList.toggle("open");
+    })
+  );
+
+const mobileMenuContainer = document.querySelector(".menu-container");
+const modalOverlay = document.querySelector(".overlay");
+if (mobileMenuContainer) {
+  mobileMenuContainer.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+}
+
+if (modalOverlay) {
+  modalOverlay.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+  });
+}
+
+const closeLinks = document.querySelectorAll(".close-link");
+if (closeLinks) {
+  console.log("closeLink");
+  closeLinks.forEach((closeLink) => {
+    closeLink.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  });
+}
 
 const swiper = new Swiper(".swiper", {
   loop: true,
@@ -50,4 +87,13 @@ const swiper = new Swiper(".swiper", {
       spaceBetween: 40,
     },
   },
+});
+
+$(document).ready(function () {
+  $(".popup-link").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
 });

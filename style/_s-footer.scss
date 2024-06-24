@@ -1,0 +1,34 @@
+footer {
+    padding: 40px 0;
+    background-color: $primary70;
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.copyright {
+    color: $primary0;
+}
+
+.footer-socials {
+
+
+    svg {
+        max-height: 40px;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            fill: $greenPrimary;
+            stroke: $greenPrimary;
+        }
+
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+}

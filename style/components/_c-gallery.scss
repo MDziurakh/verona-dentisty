@@ -1,8 +1,11 @@
 .c-gallery {
     column-count: 2;
-    /* Кількість стовпців */
     column-gap: 10px;
-    /* Відстань між стовпцями */
+
+    @media (min-width:768px) {
+        column-count: 3;
+
+    }
 }
 
 .gallery-item {

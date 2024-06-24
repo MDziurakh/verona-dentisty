@@ -1,21 +1,38 @@
 .s-contact-info {
-    background-color: $primary0;
+    background-color: $primary10;
 }
 
 .info-row {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 20px;
 
     @media (min-width:768px) {
         grid-template-columns: 1fr 1fr;
     }
 
     @media (min-width:1240px) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 .info-item {
     display: flex;
-    
+    align-items: center;
+    gap: 12px;
+
+    svg {
+        width: 48px;
+        height: auto;
+    }
+
+    p {
+        font-size: 18px;
+        color: $primary70;
+    }
+}
+
+.work-hours {
+    display: flex;
+    flex-direction: column;
 }

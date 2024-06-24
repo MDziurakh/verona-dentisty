@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouDent</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
@@ -15,6 +19,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <link rel="stylesheet" href="popup-gallery/magnific-popup.css">
+
 </head>
 
 <body>
@@ -22,28 +28,78 @@
         <div class="header-container">
             <div class="container">
                 <div class="logo-wrapper">
-                    <img src="assets/logo/logo svg (full).svg" />
+                    <a href="#">
+                        <img src="assets/logo/logo svg (full).svg" />
+                    </a>
+                </div>
+                <div class="full-menu">
+                    <ul>
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
                 </div>
                 <div class="header__call-us">
-                    <a href="tel:+380967529331">
-                        Call us! <span class="bold">+38(096)-752-93-31</span>
-                    </a>
+                    <button class="c-button"><a href="tel:+380967529331">Chiamaci!</a></button>
+                </div>
+                <div class="burger-contain">
+                    <div class="burger">
+                        <div class="bun bun-top"></div>
+                        <div class="bun bun-mid"></div>
+                        <div class="bun bun-bottom"></div>
+                    </div>
+                </div>
+
+                <div class="mobile-menu">
+                    <div class="overlay">
+                        <div class="menu-container">
+                            <div class="mobile-menu__top-section">
+                                <div class="mobile-menu-logo close-link">
+                                    <a href="#">
+                                        <img src="assets/logo/logo-light.svg" alt="logo" srcset="">
+                                    </a>
+                                </div>
+                                <div class="burger-contain open">
+                                    <div class="burger">
+                                        <div class="bun bun-top"></div>
+                                        <div class="bun bun-mid"></div>
+                                        <div class="bun bun-bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mobile-menu-list">
+                                <ul>
+                                    <li class="close-link"><a href="#about-us">About us</a></li>
+                                    <li class="close-link"><a href="#services">Services</a></li>
+                                    <li class="close-link"><a href="#contacts">Contacts</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mobile-menu__button">
+                                <button class="c-button full">Chiamaci!</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
     <main>
-        <div class="wrapper">
-            <section class="s-hero section-padding" style="background-image: url(./assets/originals/cabinet.jpeg);">
+        <section class="s-hero section-padding" style="background-image: url(./assets/originals/cabinet.jpeg);">
+            <div class="wrapper">
                 <div class="container">
                     <div class="hero-cta">
-                        <h1>Bringing Smiles to Life</h1>
+                        <h1>Centro Odontoriatrico</h1>
                         <p>Take the First Step Towards a Brighter Smile</p>
                         <button class="c-button">Request appointment</button>
                     </div>
                 </div>
-            </section>
-            <section class="s-services section-padding">
+            </div>
+        </section>
+        <section class="s-services section-padding anchor" id="services">
+            <div class="wrapper">
                 <div class="container">
                     <div class="c-section-heading">
                         <h2>Top Quality Dental Care</h2>
@@ -56,34 +112,187 @@
                     <div class="services-grig">
                         <div class="c-service-card">
                             <div class="card-image-container">
-                                <img src="assets/treatment.jpg" alt="treatment">
+                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#ffffff"
+                                                d="M23,4 C16.372583,4 12,11.6111593 12,21 C12,30.3888407 16.372583,60 23,60 C26.8661992,60 27.3053608,35.4098157 32.5,35.3875505 C38.6946392,35.4098157 38.1338008,60 42,60 C48.627417,60 53,30.3888407 53,21 C53,11.6111593 48.627417,4 42,4 C38.8333333,4 35.6666667,7 32.5,7 C29.3333333,7 26.1666667,4 23,4 Z" />
+                                            <circle cx="23" cy="17" r="5" fill="#c2c2c2" />
+                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
+                                                points="23.594 13.019 25.378 8.296 24.118 6.277" />
+                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
+                                                points="23.75 13.196 31.817 18.498 33.258 22.182" />
+                                            <path stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
+                                                d="M31.7867053,18.5430823 L36.4124343,17.1692448" />
+                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
+                                                points="22.625 18.807 19.025 24.74 23.428 28.916" />
+                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
+                                                points="19.533 17.225 15.149 15.342 13.802 17.773" />
+                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
+                                                points="24.051 19.661 26.982 26.302 36.951 28.427" />
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
-                            <h3>Professional Teeth Cleaning</h3>
-                            <p>Remove plaque and tartar to prevent cavities and gum disease. Recommended every 6 months
-                            </p>
+                            <h3>Oral surgery</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolores nobis eveniet!</p>
                         </div>
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <img src="assets/dentist-showing-jaws.jpg" alt="dentist-showing-jaws">
-                            </div>
-                            <h3> Cavity Treatment
-                            </h3>
-                            <p>Relieve tooth pain and stop decay with modern, effective cavity treatments </p>
-                        </div>
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <img src="assets/smile-old-man.jpg" alt="smile-old-man">
-                            </div>
-                            <h3>Teeth Whitening</h3>
-                            <p>Achieve a brighter smile with our safe, effective teeth whitening options. Noticeable
-                                results in one session</p>
-                        </div>
-                    </div>
 
+                        <div class="c-service-card">
+                            <div class="card-image-container">
+                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#ffffff"
+                                                d="M51.8137386,32 C52.5838535,26.7174939 53,21.8964501 53,19 C53,9.61115925 48.627417,2 42,2 C38.8333333,2 35.6666667,5 32.5,5 C29.3333333,5 26.1666667,2 23,2 C16.372583,2 12,9.61115925 12,19 C12,21.8964501 12.4161465,26.7174939 13.1862614,32 L51.8137386,32 L51.8137386,32 Z" />
+                                            <polygon fill="#ffffff"
+                                                points="24 32 41 32 41 39 38 43 38 58 32.5 62 27 58 27 43 24 39" />
+                                            <path stroke="#FFF" stroke-linecap="round" stroke-width="2"
+                                                d="M25,6 C20.581722,6 17,9.581722 17,14" />
+                                            <polygon fill="#D8D8D8" points="27 51 38 54 38 56 27 53" />
+                                            <polygon fill="#D8D8D8" points="27 47 38 50 38 52 27 49" />
+                                            <polygon fill="#D8D8D8" points="27 43 38 46 38 48 27 45" />
+                                        </g>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <h3>Implants</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolores nobis eveniet!</p>
+                        </div>
+
+                        <div class="c-service-card">
+                            <div class="card-image-container">
+                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#ffffff" stroke="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#ffffff"
+                                                d="M33,5 C26.372583,5 22,12.6111593 22,22 C22,31.3888407 26.372583,61 33,61 C36.8661992,61 37.3053608,36.4098157 42.5,36.3875505 C48.6946392,36.4098157 48.1338008,61 52,61 C58.627417,61 63,31.3888407 63,22 C63,12.6111593 58.627417,5 52,5 C48.8333333,5 45.6666667,8 42.5,8 C39.3333333,8 36.1666667,5 33,5 Z" />
+                                            <g transform="rotate(90 9.5 9.5)">
+                                                <path fill="#ffffff"
+                                                    d="M0,11 C0,9.8954305 0.904756604,9 2.00134006,9 L42.3792329,9 L61.0277499,6.41241601 C62.6692783,6.18464494 64,7.34967041 64,9.00925446 L64,9.99074554 C64,11.6527109 62.663269,13 60.9989882,13 L2.00329863,13 C0.896907345,13 0,12.1122704 0,11 L0,11 Z" />
+                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                    d="M3,7 L3,0.91723747" />
+                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                    d="M7,7 L7,0.91723747" />
+                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                    d="M11,7 L11,0.91723747" />
+                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                    d="M15,7 L15,0.91723747" />
+                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                    d="M19,7 L19,0.91723747" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3>Dental care</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit voluptates vel est,
+                                voluptas aperiam laudantium quia.</p>
+                        </div>
+
+                        <div class="c-service-card">
+                            <div class="card-image-container">
+                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#000000">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#ffffff"
+                                                d="M35.0714286,21 C30.8109462,21 28,25.8928881 28,31.9285714 C28,37.9642548 30.8109462,57 35.0714286,57 C37.5568423,57 38.1962339,41.1920244 41.5356448,41.177711 C45.5179129,41.1920244 44.8003005,57 47.2857143,57 C51.5461966,57 54.3571429,37.9642548 54.3571429,31.9285714 C54.3571429,25.8928881 51.5461966,21 47.2857143,21 C45.25,21 43.5713591,22.9630984 41.5356448,22.9630984 C39.4999305,22.9630984 37.1071429,21 35.0714286,21 Z" />
+                                            <path stroke="#ffffff" stroke-linecap="round" stroke-width="2"
+                                                d="M25,20 L17,12" />
+                                            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M32 14L32 4M9 27L20 27" />
+                                        </g>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <h3>Dental service</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                        <div class="c-service-card">
+                            <div class="card-image-container">
+                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#ffffff" stroke="#ffffff">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <polyline stroke="#ffffff" stroke-linecap="round" stroke-width="2"
+                                                points="28.986 32.695 28.986 10 23 10" />
+                                            <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                d="M30,24 L34,24" />
+                                            <circle cx="19" cy="10" r="5" fill="#ffffff" />
+                                            <path fill="#ffffff" fill-rule="nonzero"
+                                                d="M55.1101377,47.7175322 C56.0889464,48.2293987 57.2973774,47.8508672 57.8092438,46.8720585 C58.3211103,45.8932498 57.9425788,44.6848188 56.9637701,44.1729523 L33.4855051,32.039344 L20.9705334,32.039344 L9.78869638,15.8283084 C9.15693144,14.9222473 7.91027706,14.6998863 7.00421589,15.3316512 C6.09815473,15.9634162 5.87579372,17.2100705 6.50755867,18.1161317 L18.985921,36.0222833 L32.6054267,36.0222833 L55.1101377,47.7175322 Z" />
+                                            <rect width="10" height="6" x="34" y="21" fill="#ffffff" />
+                                            <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                d="M37 24L37 29M41 24L41 29" />
+                                            <polygon fill="#ffffff" points="19 36 31 36 27.057 40.011 31 46 24 46" />
+                                            <polygon fill="#ffffff" points="19 46 31 46 31 53 10 53" />
+                                            <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
+                                                d="M2,54 L61.008474,54" />
+                                        </g>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <h3>Emergency service</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis vero
+                                tempore dolorum error esse fugiat?</p>
+                        </div>
+
+                        <div class="c-service-card">
+                            <div class="card-image-container">
+                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#ffffff">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#ffffff"
+                                                d="M23,5 C16.372583,5 12,12.6111593 12,22 C12,31.3888407 16.372583,61 23,61 C26.8661992,61 27.3053608,36.4098157 32.5,36.3875505 C38.6946392,36.4098157 38.1338008,61 42,61 C48.627417,61 53,31.3888407 53,22 C53,12.6111593 48.627417,5 42,5 C38.8333333,5 35.6666667,8 32.5,8 C29.3333333,8 26.1666667,5 23,5 Z" />
+                                            <circle cx="32" cy="22" r="6" stroke="#286eb8" stroke-linecap="round"
+                                                stroke-width="2" />
+                                            <path stroke="#286eb8" stroke-linecap="square" stroke-width="2"
+                                                d="M32 12L32 32M22 22L42.0249844 22" />
+                                        </g>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <h3>Tooth extract</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                    </div>
                 </div>
-            </section>
-            <section class="s-about-us section-padding"
-                style="background-image: url('assets/originals/cabinet2.jpeg');">
+        </section>
+        <section class="s-about-us section-padding anchor" id="about-us"
+            style="background-image: url('assets/originals/cabinet2.jpeg');">
+            <div class="wrapper">
                 <div class="container">
                     <div class="s-about-us__content">
                         <div class="s-about-us__image">
@@ -109,52 +318,96 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="s-gallery section-padding">
+            </div>
+        </section>
+        <section class="s-gallery section-padding">
+            <div class="wrapper">
                 <div class="container">
                     <div class="c-section-heading dark">
                         <h2>Gallery</h2>
                     </div>
                     <div class="c-gallery">
                         <div class="gallery-item">
-                            <img src="assets/originals/cabinet.jpeg" alt="">
+                            <a href="assets/full/1.jpeg" class="popup-link">
+                                <img src="assets/full/1.jpeg" alt="">
+
+                            </a>
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/originals/owner.jpeg" alt="">
+                            <a href="assets/full/2.jpeg" class="popup-link">
+                                <img src="assets/full/2.jpeg" alt="">
+
+                            </a>
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/dentist-as-bg.jpg" alt="">
+                            <a href="assets/full/3.jpeg" class="popup-link">
+                                <img src="assets/full/3.jpeg" alt="">
+
+                            </a>
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/dentist-showing-jaws.jpg" alt="">
+                            <a href="assets/full/7.jpeg" class="popup-link">
+                                <img src="assets/full/7.jpeg" alt="">
+
+                            </a>
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/dentist-with-her-colleague.jpg" alt="">
+                            <a href="assets/full/20.jpeg" class="popup-link">
+                                <img src="assets/full/20.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="assets/full/17.jpeg" class="popup-link">
+                                <img src="assets/full/17.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="assets/full/14.jpeg" class="popup-link">
+                                <img src="assets/full/14.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="assets/full/15.jpeg" class="popup-link">
+                                <img src="assets/full/15.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="assets/full/16.jpeg" class="popup-link">
+                                <img src="assets/full/16.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="assets/full/11.jpeg" class="popup-link">
+                                <img src="assets/full/11.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="assets/full/10.jpeg" class="popup-link">
+                                <img src="assets/full/10.jpeg" alt="">
+
+                            </a>
                         </div>
                     </div>
-                    <div class="gallery-button-wrapper">
-                        <button class="c-button dark">Show more</button>
-                    </div>
-
-                    <div class="c-testimonial">
-
-                    </div>
-
                 </div>
-            </section>
+            </div>
+        </section>
 
 
-            <section class="s-testimonials section-padding">
+        <section class="s-testimonials section-padding">
+            <div class="wrapper">
                 <div class="container" style="position: relative;">
                     <div class="c-section-heading dark">
                         <h2>Testimonials</h2>
                     </div>
-                    <!-- Slider main container -->
                     <div class="swiper-outer">
                         <div class="swiper">
-                            <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
-                                <!-- Slides -->
                                 <div class="swiper-slide">
                                     <div class="c-feedback">
                                         <p>Ho trovato recensioni positive da parte dei clienti e ho deciso di provarlo
@@ -216,19 +469,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- If we need pagination -->
                             <div class="swiper-pagination"></div>
-
-                            <!-- If we need navigation buttons -->
-
                         </div>
                         <div class="swiper-button swiper-button-prev"></div>
                         <div class="swiper-button swiper-button-next"></div>
                     </div>
                 </div>
-            </section>
-        </div>
-        <section class="s-map section-padding">
+            </div>
+        </section>
+        <section class="s-map section-padding anchor" id="contacts">
             <div class="wrapper">
                 <div class="container">
                     <div class="c-section-heading dark">
@@ -273,21 +522,125 @@
                 </div>
             </div>
         </section>
-        <div class="wrapper">
-            <section class="s-contact-info section-padding">
+        <section class="s-contact-info section-padding">
+            <div class="wrapper">
                 <div class="container">
-                    
+                    <div class="info-row">
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_17_19834)">
+                                    <path
+                                        d="M21 15.46L15.73 14.85L13.21 17.37C10.38 15.93 8.06002 13.62 6.62002 10.78L9.15002 8.25L8.54002 3H3.03002C2.45002 13.18 10.82 21.55 21 20.97V15.46Z"
+                                        fill="#1A374C" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_17_19834">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>
+                                +39 0774 8271469
+                            </p>
+                        </div>
+
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_17_19784)">
+                                    <path d="M22 4H2.01L2 20H22V4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z"
+                                        fill="#1A374C" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_17_19784">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>
+                                simple.mail@gmail.com
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_17_20265)">
+                                    <path
+                                        d="M12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12ZM12 2C7.8 2 4 5.22 4 10.2C4 13.52 6.67 17.45 12 22C17.33 17.45 20 13.52 20 10.2C20 5.22 16.2 2 12 2Z"
+                                        fill="#1A374C" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_17_20265">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>
+                                Caserta CE, via Tazzoli
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_11_5469)">
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"
+                                        fill="#1A374C" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_11_5469">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="work-hours">
+                                <p>Lun - Ven: 09:00 - 19:00</p>
+                                <p>Sab - Dom: 09:00 - 19:00</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
     </main>
 
 
 
-    <footer></footer>
-</body>
+    <footer>
+        <div class="wrapper">
+            <div class="container">
+                <div class="copyright">© YouDent 2024</div>
+                <div class="footer-socials">
+                    <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z" />
+                        </g>
+                    </svg>
+                    <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z" />
+                            <path
+                                d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<script src="index.js"></script>
+    <script src="popup-gallery/jquery.magnific-popup.js"></script>
+
+    <script src="index.js"></script>
+</body>
 
 </html>

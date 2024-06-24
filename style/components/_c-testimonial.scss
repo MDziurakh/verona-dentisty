@@ -66,6 +66,7 @@ $slideExtraMargin: 40px;
     }
 
     @media (min-width:768px) {
+        line-height: 100%;
         padding: 40px 20px;
 
         &::before {
@@ -75,7 +76,6 @@ $slideExtraMargin: 40px;
         }
 
         &::after {
-            top: -30px;
             font-size: 60px;
         }
     }
