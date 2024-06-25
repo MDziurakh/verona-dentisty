@@ -69,22 +69,22 @@
     }
 
     .name-label::before {
-        background-image: url('../../assets/icons/person.svg');
+        background-image: url('x../assets/icons/person.svg');
     }
 
     .phone-label::before {
-        background-image: url('../../assets/icons/phone.svg');
+        background-image: url('x../assets/icons/phone.svg');
     }
 
     .email-label::before {
-        background-image: url('../../assets/icons/email.svg');
+        background-image: url('x../assets/icons/email.svg');
     }
 
     .message-label::before {
         top: 8px;
         margin: unset;
         bottom: unset;
-        background-image: url('../../assets/icons/message.svg');
+        background-image: url('x../assets/icons/message.svg');
     }
 }
 

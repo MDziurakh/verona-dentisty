@@ -310,6 +310,13 @@ h1 {
   align-items: center;
   gap: 12px;
 }
+.info-item a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
 .info-item svg {
   width: 48px;
   height: auto;
@@ -317,6 +324,9 @@ h1 {
 .info-item p {
   font-size: 18px;
   color: #275372;
+}
+.info-item:hover a p {
+  text-decoration: underline;
 }
 
 .work-hours {
@@ -839,19 +849,19 @@ footer .container {
   background-size: contain;
 }
 .c-form .name-label::before {
-  background-image: url("../../assets/icons/person.svg");
+  background-image: url("x../assets/icons/person.svg");
 }
 .c-form .phone-label::before {
-  background-image: url("../../assets/icons/phone.svg");
+  background-image: url("x../assets/icons/phone.svg");
 }
 .c-form .email-label::before {
-  background-image: url("../../assets/icons/email.svg");
+  background-image: url("x../assets/icons/email.svg");
 }
 .c-form .message-label::before {
   top: 8px;
   margin: unset;
   bottom: unset;
-  background-image: url("../../assets/icons/message.svg");
+  background-image: url("x../assets/icons/message.svg");
 }
 
 .form-hint {

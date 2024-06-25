@@ -21,6 +21,14 @@
     align-items: center;
     gap: 12px;
 
+    a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+    }
+
     svg {
         width: 48px;
         height: auto;
@@ -29,6 +37,12 @@
     p {
         font-size: 18px;
         color: $primary70;
+    }
+
+    &:hover {
+        a p {
+            text-decoration: underline;
+        }
     }
 }
 
