@@ -2,6 +2,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 20%;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
@@ -38,7 +39,11 @@
     flex: 1 0 43%;
     border-radius: 50%;
     overflow: hidden;
+    max-width: 400px;
 
+    @media (min-width:768px) {
+        max-width: none;
+    }
 }
 
 .s-about-us__info {

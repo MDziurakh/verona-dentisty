@@ -46,12 +46,12 @@ header {
     transition: all .3s ease;
     max-width: 160px;
     flex-shrink: 0;
+    margin-right: auto;
 }
 
 
 .header__call-us {
     display: none;
-    margin-left: auto;
     text-transform: uppercase;
     color: $darkBlueColor;
     font-size: 16px;

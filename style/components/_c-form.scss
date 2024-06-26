@@ -23,6 +23,8 @@
         width: 100%;
         outline: none;
         border: 1px solid $primary90;
+        color: $primary90;
+        max-height: 56px;
 
         &:focus {
             border-color: $primary50;
@@ -66,42 +68,104 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        pointer-events: none;
     }
 
     .name-label::before {
-        background-image: url('x../assets/icons/person.svg');
+        background-image: url('../assets/icons/person.svg');
     }
 
     .phone-label::before {
-        background-image: url('x../assets/icons/phone.svg');
+        background-image: url('../assets/icons/phone.svg');
     }
 
     .email-label::before {
-        background-image: url('x../assets/icons/email.svg');
+        background-image: url('../assets/icons/email.svg');
+    }
+
+    .date-label {
+        input {
+            padding-right: 10px;
+            -moz-appearance: none !important;
+            appearance: none !important;
+        }
+
+        &::before {
+            background-image: url('../assets/icons/calendar.svg');
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+
+
+        input {
+            color: transparent;
+
+            &::after {
+                content: "Scegli l'ora dell'appuntamento";
+                position: absolute;
+                top: 50%;
+                left: 18px;
+                transform: translateY(-50%);
+                color: $default50;
+                pointer-events: none;
+                transition: opacity 0.2s
+            }
+
+            &:focus {
+                color: $primary90;
+
+                &::after {
+                    content: '';
+                }
+            }
+
+            &:not(:placeholder-shown)+&::after {
+                opacity: 0;
+            }
+        }
+
+        &.filled {
+            input {
+                color: $primary90;
+
+                &::after {
+                    content: "";
+                }
+            }
+
+            &:not(:placeholder-shown)+&::after {
+                opacity: 0;
+            }
+        }
     }
 
     .message-label::before {
         top: 8px;
         margin: unset;
         bottom: unset;
-        background-image: url('x../assets/icons/message.svg');
+        background-image: url('../assets/icons/message.svg');
     }
-}
 
-.form-hint {
-    color: $default50;
-    font-size: 12px;
-    margin-bottom: 20px;
-}
 
-.two-inputs-holder {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
 
-    @media (min-width:768px) {
-        flex-direction: row;
-        justify-content: space-between;
-        column-gap: 10px;
+    .form-hint {
+        color: $default50;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .inputs-holder {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        @media (min-width:768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 10px;
+        }
     }
 }

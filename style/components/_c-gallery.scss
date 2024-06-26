@@ -1,29 +1,20 @@
 .c-gallery {
-    column-count: 2;
-    column-gap: 10px;
+    columns: 2;
+    column-gap: 12px;
 
     @media (min-width:768px) {
-        column-count: 3;
+        columns: 3;
+    }
 
+    @media (min-width:1240px) {
+        columns: 4;
     }
 }
 
 .gallery-item {
-    overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     img {
-        width: 100%;
-        transition: transform 0.3s;
-        overflow: hidden;
-
-        &:hover {
-            transform: scale(1.1);
-        }
+        vertical-align: top;
     }
-}
-
-.gallery-button-wrapper {
-    margin: 20px 0;
-    text-align: center;
 }

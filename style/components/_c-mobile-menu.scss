@@ -13,10 +13,9 @@
 
 
     &.open {
-    max-height: none;
-    pointer-events: all;
-    opacity: 1;
-        // display: block;
+        max-height: none;
+        pointer-events: all;
+        opacity: 1;
 
         @media (min-width:768px) {
             display: none;

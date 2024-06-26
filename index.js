@@ -15,85 +15,97 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", checkScroll);
 
   checkScroll();
-});
 
-const mobileMenu = document.querySelector(".mobile-menu");
-const burgers = document.querySelectorAll(".burger-contain");
-if (burgers)
-  burgers.forEach((burger) =>
-    burger.addEventListener("click", (e) => {
-      e.preventDefault();
-      mobileMenu.classList.toggle("open");
-    })
-  );
+  const burgers = document.querySelectorAll(".burger-contain");
+  if (burgers)
+    burgers.forEach((burger) =>
+      burger.addEventListener("click", (e) => {
+        e.preventDefault();
+        mobileMenu.classList.toggle("open");
+      })
+    );
 
-const mobileMenuContainer = document.querySelector(".menu-container");
-const modalOverlay = document.querySelector(".overlay");
-if (mobileMenuContainer) {
-  mobileMenuContainer.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-}
+  const mobileMenuContainer = document.querySelector(".menu-container");
+  const modalOverlay = document.querySelector(".overlay");
+  if (mobileMenuContainer) {
+    mobileMenuContainer.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
 
-if (modalOverlay) {
-  modalOverlay.addEventListener("click", () => {
-    mobileMenu.classList.remove("open");
-  });
-}
-
-const closeLinks = document.querySelectorAll(".close-link");
-if (closeLinks) {
-  console.log("closeLink");
-  closeLinks.forEach((closeLink) => {
-    closeLink.addEventListener("click", () => {
+  if (modalOverlay) {
+    modalOverlay.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
     });
+  }
+
+  const closeLinks = document.querySelectorAll(".close-link");
+  if (closeLinks) {
+    closeLinks.forEach((closeLink) => {
+      closeLink.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+      });
+    });
+  }
+
+  const dateInput = document.getElementById("date-input");
+  const dateLabel = document.querySelector(".date-label");
+
+  if (dateInput) {
+    dateInput.addEventListener("input", function () {
+      if (this.value !== "") {
+        dateLabel.classList.add("filled");
+      } else {
+        dateLabel.classList.remove("filled");
+      }
+    });
+  }
+
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+      },
+
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+      },
+
+      1240: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 40,
+      },
+    },
   });
-}
-
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 20,
-  // autoplay: {
-  //   delay: 5000,
-  // },
-
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      slidesPerGroup: 1, // count of single swipe
-      spaceBetween: 20,
-    },
-
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2, // count of single swipe
-      spaceBetween: 20,
-    },
-
-    1240: {
-      slidesPerView: 3,
-      slidesPerGroup: 3, // count of single swipe
-      spaceBetween: 40,
-    },
-  },
 });
 
 $(document).ready(function () {
   $(".popup-link").magnificPopup({
     type: "image",
-    gallery: {
-      enabled: true,
+    closeBtnInside: false,
+    image: {
+      verticalFit: true,
     },
   });
 });
