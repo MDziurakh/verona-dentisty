@@ -14,7 +14,44 @@
 .gallery-item {
     margin-bottom: 12px;
 
+    a {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            display: inline-block;
+            background-color: transparentize($color: $primary70, $amount: .5);
+            z-index: 10;
+            max-width: 0;
+            transition: all .4s ease;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            display: inline-block;
+            z-index: 11;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            background-image: url('../../assets/icons/zoom_in.svg');
+            max-width: 0;
+        }
+    }
+
     img {
         vertical-align: top;
+    }
+
+    &:hover {
+
+        a:before,
+        a:after {
+            max-width: 100%;
+            transition: all .4s ease;
+        }
     }
 }

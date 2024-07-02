@@ -1,0 +1,100 @@
+:root {
+    --opener-size: 40px;
+    --sticky-icon-padding: 6px;
+
+    @media (min-width:480px) {
+        --opener-size: 48px;
+    }
+
+    @media (min-width:768px) {
+        --opener-size: 56px;
+    }
+
+    @media (min-width:992px) {
+        --opener-size: 60px;
+    }
+}
+
+.sticky-contacts {
+    position: sticky;
+    top: 80%;
+    left: calc(100% - var(--opener-size));
+    z-index: 500;
+    max-width: max-content;
+    display: flex;
+}
+
+.sticky-contacts__opener {
+    max-width: var(--opener-size);
+    max-height: var(--opener-size);
+    // position: absolute;
+    padding: var(--sticky-icon-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary50;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: -4px -4px 5px rgba(0, 0, 0, 0.3), -4px 4px 5px rgba(0, 0, 0, 0.3), 4px 4px 5px rgba(0, 0, 0, 0.3), -8px -8px 15px rgba(0, 0, 0, 0.1), -8px 8px 15px rgba(0, 0, 0, 0.1), 8px 8px 15px rgba(0, 0, 0, 0.1);
+
+
+    &:hover {
+        background-color: $primary70;
+        transition: all .3s ease;
+        box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.sticky_contacts__container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-width: var(--opener-size);
+    position: absolute;
+
+    &:hover {
+        .sticky-contacts__content {
+            max-height: max-content;
+            visibility: visible;
+            box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.2), -3px 3px 3px rgba(0, 0, 0, 0.2), 3px 3px 3px rgba(0, 0, 0, 0.2), -6px -6px 6px rgba(0, 0, 0, 0.15), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .sticky-contacts__opener {
+
+            background-color: $primary70;
+            transition: all .3s ease;
+            box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.2), -3px 3px 3px rgba(0, 0, 0, 0.2), 3px 3px 3px rgba(0, 0, 0, 0.2), -6px -6px 6px rgba(0, 0, 0, 0.15), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+
+.sticky-contacts__content {
+    position: absolute;
+    bottom: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: $primary70;
+    max-height: 0;
+    visibility: hidden;
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $primary90;
+            cursor: pointer;
+        }
+    }
+
+
+    img {
+        max-width: var(--opener-size);
+        max-height: var(--opener-size);
+        padding: var(--sticky-icon-padding);
+    }
+}

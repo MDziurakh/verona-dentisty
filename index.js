@@ -15,13 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", checkScroll);
 
   checkScroll();
-
+  // console.log(callMeButton);
   const burgers = document.querySelectorAll(".burger-contain");
   if (burgers)
     burgers.forEach((burger) =>
       burger.addEventListener("click", (e) => {
         e.preventDefault();
         mobileMenu.classList.toggle("open");
+        const boei1 = document.querySelector("#boei_close_trigger_message");
+        const boei2 = document.querySelector("#boei_trigger_message");
+        const boei3 = document.querySelector("#boei_button");
+        
+        if (boei1) boei1.classList.toggle("openedMenu");
+        if (boei2) boei2.classList.toggle("openedMenu");
+        if (boei3) boei3.classList.toggle("openedMenu");
       })
     );
 
@@ -36,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modalOverlay) {
     modalOverlay.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
+      // callMeButton.classList.remove("open");
     });
   }
 

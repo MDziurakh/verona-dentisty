@@ -65,6 +65,7 @@ $greenPrimary: #41B06E;
 @import 's-map';
 @import 's-contact-info';
 @import 's-footer';
+@import '_s-sticky-contacts';
 @import 'components/_c-mobile-menu';
 @import 'components/_c-burger';
 @import 'components/_c-full-menu';
@@ -107,6 +108,7 @@ $greenPrimary: #41B06E;
 
 main {
     margin-top: $headerHeight;
+    position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -131,4 +133,15 @@ html {
 
 body {
     -ms-overflow-style: scrollbar;
+}
+
+
+#boei_container {
+    button {
+        background-color: $greenPrimary !important;
+    }
+}
+
+[id*="boei"].openedMenu {
+    display: none !important;
 }
