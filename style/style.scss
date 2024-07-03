@@ -137,8 +137,20 @@ body {
 
 
 #boei_container {
+    max-width: 280px !important;
+    
+    @media (min-width:375px) {
+        max-width: 350px !important;
+    }
+
     button {
         background-color: $greenPrimary !important;
+        padding: 9px 18px !important;
+
+        @media (min-width:768px) {
+            padding: 18px 36px !important;
+        }
+
     }
 }
 

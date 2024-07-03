@@ -6,12 +6,19 @@
     &.open {
 
         .burger {
-            border: 2px solid $primary70;
+            border: 2px solid $primary0;
             background-color: $primary70;
         }
 
-        &:hover .burger {
-            border: 2px solid #fff;
+        &:hover {
+            .burger {
+                // border: 2px solid $primary70;
+                background-color: $primary0;
+            }
+
+            .bun {
+                background-color: $primary70;
+            }
         }
 
         .bun-top {
@@ -42,7 +49,7 @@
 
 .burger {
     background: $primary0;
-    border: 2px solid $primary0;
+    border: 2px solid $primary70;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
@@ -55,7 +62,11 @@
     transition: all .4s ease;
 
     &:hover {
-        border-color: $primary70;
+        background: $primary70;
+
+        .bun {
+            background-color: #fff;
+        }
     }
 }
 

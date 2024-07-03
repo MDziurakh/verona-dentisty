@@ -138,7 +138,7 @@ header.scrolled .logo-wrapper {
 
 .hero-cta {
   position: relative;
-  margin: auto auto auto 0;
+  margin: 0 auto;
   z-index: 100;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -170,18 +170,13 @@ header.scrolled .logo-wrapper {
 }
 @media (min-width: 768px) {
   .hero-cta {
-    margin: 0 auto;
     padding: 40px;
+    margin: auto auto auto 0;
   }
 }
 @media (min-width: 992px) {
   .hero-cta {
     padding: 60px;
-  }
-}
-@media (min-width: 1240px) {
-  .hero-cta {
-    padding: 80px;
   }
 }
 
@@ -244,6 +239,7 @@ h1 {
 }
 @media (min-width: 768px) {
   .s-about-us__content {
+    gap: 80px;
     flex-direction: row;
   }
 }
@@ -252,7 +248,7 @@ h1 {
   flex: 1 0 43%;
   border-radius: 50%;
   overflow: hidden;
-  max-width: 400px;
+  max-width: 360px;
 }
 @media (min-width: 768px) {
   .s-about-us__image {
@@ -264,6 +260,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 80%;
 }
 
 .s-about-us__info__cta {
@@ -376,23 +373,23 @@ footer .container {
   width: 100%;
 }
 
-.footer-socials {
+.socials {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
 }
-.footer-socials svg {
+.socials svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.footer-socials svg:hover {
+.socials svg:hover {
   fill: #41B06E;
   stroke: #41B06E;
 }
-.footer-socials svg:not(:last-child) {
+.socials svg:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -529,6 +526,7 @@ footer .container {
   padding: 0 20px;
   height: 100%;
   background-color: #275372;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 }
 .mobile-menu .mobile-menu__top-section {
   display: flex;
@@ -585,6 +583,9 @@ footer .container {
 .mobile-menu .mobile-menu-list li:hover a {
   text-decoration: underline;
 }
+.mobile-menu .mobile-menu__socials {
+  margin: 80px auto 0;
+}
 @media (min-width: 768px) {
   .mobile-menu {
     display: none;
@@ -601,11 +602,14 @@ footer .container {
   display: inline-flex;
 }
 .burger-contain.open .burger {
-  border: 2px solid #275372;
+  border: 2px solid #fff;
   background-color: #275372;
 }
 .burger-contain.open:hover .burger {
-  border: 2px solid #fff;
+  background-color: #fff;
+}
+.burger-contain.open:hover .bun {
+  background-color: #275372;
 }
 .burger-contain.open .bun-top {
   background: #fff;
@@ -628,7 +632,7 @@ footer .container {
 
 .burger {
   background: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #275372;
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
@@ -640,7 +644,10 @@ footer .container {
   transition: all 0.4s ease;
 }
 .burger:hover {
-  border-color: #275372;
+  background: #275372;
+}
+.burger:hover .bun {
+  background-color: #fff;
 }
 
 .bun {
@@ -813,10 +820,10 @@ footer .container {
     font-size: 18px;
   }
 }
-.c-section-heading.al-left h2 {
+.c-section-heading.all-left h2 {
   text-align: left;
 }
-.c-section-heading.al-left p {
+.c-section-heading.all-left p {
   text-align: left;
 }
 .c-section-heading.dark h2,
@@ -1027,6 +1034,7 @@ footer .container {
 }
 .c-form input {
   padding: 18px 36px 18px 18px;
+  background-color: #fff;
 }
 .c-form textarea {
   padding: 18px 36px 18px 18px;
@@ -1196,8 +1204,22 @@ body {
   -ms-overflow-style: scrollbar;
 }
 
+#boei_container {
+  max-width: 280px !important;
+}
+@media (min-width: 375px) {
+  #boei_container {
+    max-width: 350px !important;
+  }
+}
 #boei_container button {
   background-color: #41B06E !important;
+  padding: 9px 18px !important;
+}
+@media (min-width: 768px) {
+  #boei_container button {
+    padding: 18px 36px !important;
+  }
 }
 
 [id*=boei].openedMenu {
