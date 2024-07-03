@@ -135,25 +135,12 @@ body {
     -ms-overflow-style: scrollbar;
 }
 
-
-#boei_container {
-    max-width: 280px !important;
-    
-    @media (min-width:375px) {
-        max-width: 350px !important;
-    }
-
-    button {
-        background-color: $greenPrimary !important;
-        padding: 9px 18px !important;
-
-        @media (min-width:768px) {
-            padding: 18px 36px !important;
-        }
-
-    }
+::-moz-selection {
+    color: $primary90;
+    background: $default50;
 }
 
-[id*="boei"].openedMenu {
-    display: none !important;
+::selection {
+    color: $primary90;
+    background: $default50;
 }

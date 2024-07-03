@@ -1,5 +1,5 @@
 .c-button {
-    padding: 9px 18px;
+    padding: 9px 12px;
     color: #fff;
     background-color: $greenPrimary;
     border: none;
@@ -7,6 +7,11 @@
     cursor: pointer;
     transition: all .2s ease;
     font-family: inherit;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 
     &:hover {
         transition: all .2s ease;
@@ -17,7 +22,47 @@
         width: 100%;
     }
 
-    @media (min-width:768px) {
+    @media (min-width:992px) {
         padding: 18px 36px;
     }
+
+    &::before {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: brightness(10);
+        flex-shrink: 0;
+    }
+
+    &.whatsApp {
+        &::before {
+            content: '';
+            background-image: url('../../assets/icons/whatsapp.svg');
+        }
+    }
+
+    &.phone {
+        &::before {
+            content: '';
+            background-image: url('../../assets/icons/phone.svg');
+        }
+    }
+
+    &.contact-form {
+        &::before {
+            content: '';
+            background-image: url('../../assets/icons/email.svg');
+        }
+    }
+
+    &.online {
+        &::before {
+            content: '';
+            background-image: url('../../assets/icons/schedule.svg');
+        }
+    }
+
 }

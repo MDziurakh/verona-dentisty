@@ -20,7 +20,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="popup-gallery/magnific-popup.css">
-    <script src="https://app.boei.help/embed/k/35009ef0-517f-4bef-89fb-8646d5c93f43" async></script>
 </head>
 
 <body>
@@ -40,7 +39,9 @@
                     </ul>
                 </div>
                 <div class="header__call-us">
-                    <button class="c-button"><a href="tel:+380967529331">Chiamaci!</a></button>
+                    <a href="#about-us">
+                        <button class="c-button">Prenotare un appuntamento!</button>
+                    </a>
                 </div>
                 <div class="burger-contain">
                     <div class="burger">
@@ -77,14 +78,14 @@
                             </div>
 
                             <div class="mobile-menu__button">
-                                <a href="+380967529331" class="close-link">
+                                <a href="tel:++39 388 8730735" class="close-link">
                                     <button class="c-button full">Chiamaci!</button>
                                 </a>
                             </div>
 
                             <div class="mobile-menu__socials">
                                 <div class="socials">
-                                    <div class="footer-icon">
+                                    <div class="social-icon">
                                         <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
                                             xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -96,7 +97,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <div class="footer-icon">
+                                    <div class="social-icon">
                                         <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
                                             xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -110,7 +111,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <div class="footer-icon">
+                                    <div class="social-icon">
                                         <svg fill="#ffffff" width="28px" height="28px" viewBox="0 0 24 24" id="Layer_1"
                                             data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
                                             stroke-width="0.00024000000000000003">
@@ -125,7 +126,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <div class="footer-icon">
+                                    <div class="social-icon">
                                         <svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Capa_1"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.15 -3.15 58.81 58.81"
@@ -157,7 +158,7 @@
                                         </svg>
                                     </div>
 
-                                    <div class="footer-icon">
+                                    <div class="social-icon">
                                         </svg><svg height="32px" width="32px" fill="#fff" viewBox="-2 -2 24 24"
                                             xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
                                             class="jam jam-whatsapp">
@@ -182,7 +183,45 @@
             </div>
         </div>
     </header>
-
+    <section class="sticky-contacts">
+        <div class="sticky_contacts__container">
+            <div class="sticky-contacts__opener">
+                <img src="assets/icons/support.svg" alt="">
+            </div>
+            <ul class="sticky-contacts__content">
+                <li>
+                    <a href="" target="_blank">
+                        <img src="assets/icons/facebook.svg" alt="" srcset="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/dott.mykola.tsidylo/" target="_blank">
+                        <img src="assets/icons/instagram.svg" alt="" srcset="">
+                    </a>
+                </li>
+                <li>
+                    <a href="viber://chat?number=++39 388 8730735" target="_blank">
+                        <img src="assets/icons/viber.svg" alt="" srcset="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/++39 388 8730735" target="_blank">
+                        <img src="assets/icons/telegram.svg" alt="" srcset="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/++39 388 8730735" target="_blank">
+                        <img src="assets/icons/whatsapp.svg" alt="" srcset="">
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:++39 388 8730735" target="_blank">
+                        <img src="assets/icons/phone.svg" alt="" srcset="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
     <main>
         <section class="s-hero section-padding" style="background-image: url(./assets/cabinet.webp);">
             <div class="wrapper">
@@ -190,8 +229,8 @@
                     <div class="hero-cta">
                         <h1>Centro Odontoriatrico</h1>
                         <p>Take the First Step Towards a Brighter Smile</p>
-                        <a href="#contacts">
-                            <button class="c-button">Request appointment</button>
+                        <a href="#services">
+                            <button class="c-button">Learn More</button>
                         </a>
                     </div>
                 </div>
@@ -410,11 +449,22 @@
                             </div>
 
                             <div class="s-about-us__info__cta">
-                                <h4 class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Inventore, harum.</h4>
-                                <a href="#contacts">
-                                    <button class="c-button">Make an appointment</button>
-                                </a>
+                                <h4 class="">This should be some text in "call to action" style! </h4>
+                                <div class="contact-methods-wrapper">
+                                    <a href="https://prenota.alfadocs.com/p/verona-ricaricadent-verona-21155"
+                                        target="_blank">
+                                        <button class="c-button online">via Online</button>
+                                    </a>
+                                    <a href="https://wa.me/++39 388 8730735" target="_blank">
+                                        <button class="c-button whatsApp">via WhatsApp</button>
+                                    </a>
+                                    <a href="tel:++39 388 8730735" target="_blank">
+                                        <button class="c-button phone">Call us</button>
+                                    </a>
+                                    <a href="#contacts">
+                                        <button class="c-button contact-form">by Contact form</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -719,7 +769,7 @@
             <div class="container">
                 <div class="copyright">© YouDent 2024</div>
                 <div class="socials">
-                    <div class="footer-icon">
+                    <div class="social-icon">
                         <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
                             xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                             <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -730,7 +780,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="footer-icon">
+                    <div class="social-icon">
                         <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
                             xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                             <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -743,7 +793,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="footer-icon">
+                    <div class="social-icon">
                         <svg fill="#ffffff" width="28px" height="28px" viewBox="0 0 24 24" id="Layer_1"
                             data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
                             stroke-width="0.00024000000000000003">
@@ -758,7 +808,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="footer-icon">
+                    <div class="social-icon">
                         <svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Capa_1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             viewBox="-3.15 -3.15 58.81 58.81" xml:space="preserve" stroke="#ffffff"
@@ -789,7 +839,7 @@
                         </svg>
                     </div>
 
-                    <div class="footer-icon">
+                    <div class="social-icon">
                         </svg><svg height="32px" width="32px" fill="#fff" viewBox="-2 -2 24 24"
                             xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-whatsapp">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
