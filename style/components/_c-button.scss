@@ -40,28 +40,28 @@
     &.whatsApp {
         &::before {
             content: '';
-            background-image: url('../../assets/icons/whatsapp.svg');
+            background-image: url('../assets/icons/whatsapp.svg');
         }
     }
 
     &.phone {
         &::before {
             content: '';
-            background-image: url('../../assets/icons/phone.svg');
+            background-image: url('../assets/icons/phone.svg');
         }
     }
 
     &.contact-form {
         &::before {
             content: '';
-            background-image: url('../../assets/icons/email.svg');
+            background-image: url('../assets/icons/email.svg');
         }
     }
 
     &.online {
         &::before {
             content: '';
-            background-image: url('../../assets/icons/schedule.svg');
+            background-image: url('../assets/icons/schedule.svg');
         }
     }
 
