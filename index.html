@@ -1,877 +1,1328 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouDent</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/logo/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/logo/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <link rel="stylesheet" href="popup-gallery/magnific-popup.css">
-</head>
+    <link rel="stylesheet" href="popup-gallery/magnific-popup.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="container">
-                <div class="logo-wrapper">
-                    <a href="#">
-                        <img src="assets/logo/logo svg (full).svg" />
-                    </a>
-                </div>
-                <div class="full-menu">
-                    <ul>
-                        <li><a href="#about-us">About us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contacts">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="header__call-us">
-                    <a href="#about-us">
-                        <button class="c-button">Prenotare un appuntamento!</button>
-                    </a>
-                </div>
-                <div class="burger-contain">
-                    <div class="burger">
-                        <div class="bun bun-top"></div>
-                        <div class="bun bun-mid"></div>
-                        <div class="bun bun-bottom"></div>
-                    </div>
-                </div>
-
-                <div class="mobile-menu">
-                    <div class="overlay">
-                        <div class="menu-container">
-                            <div class="mobile-menu__top-section">
-                                <div class="mobile-menu-logo close-link">
-                                    <a href="#">
-                                        <img src="assets/logo/logo-light.svg" alt="logo" srcset="">
-                                    </a>
-                                </div>
-                                <div class="burger-contain open">
-                                    <div class="burger">
-                                        <div class="bun bun-top"></div>
-                                        <div class="bun bun-mid"></div>
-                                        <div class="bun bun-bottom"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mobile-menu-list">
-                                <ul>
-                                    <li class="close-link"><a href="#about-us">About us</a></li>
-                                    <li class="close-link"><a href="#services">Services</a></li>
-                                    <li class="close-link"><a href="#contacts">Contacts</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="mobile-menu__button">
-                                <a href="#about-us" class="close-link">
-                                    <button class="c-button full">Prenotare un appuntamento!</button>
-                                </a>
-                            </div>
-
-                            <div class="mobile-menu__socials">
-                                <div class="socials">
-                                    <div class="social-icon">
-                                        <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path
-                                                    d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z" />
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="social-icon">
-                                        <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path
-                                                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z" />
-                                                <path
-                                                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z" />
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="social-icon">
-                                        <svg fill="#ffffff" width="28px" height="28px" viewBox="0 0 24 24" id="Layer_1"
-                                            data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
-                                            stroke-width="0.00024000000000000003">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke="#CCCCCC" stroke-width="0.336"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <title>telegram</title>
-                                                <path
-                                                    d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z">
-                                                </path>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="social-icon">
-                                        <svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Capa_1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.15 -3.15 58.81 58.81"
-                                            xml:space="preserve" stroke="#ffffff" stroke-width="1.8903960000000002">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M31.256,0H21.254C10.778,0,2.255,8.521,2.255,18.995v9.01c0,7.8,4.793,14.81,12,17.665v5.841 c0,0.396,0.233,0.754,0.595,0.914c0.13,0.058,0.268,0.086,0.405,0.086c0.243,0,0.484-0.089,0.671-0.259L21.725,47h9.531 c10.476,0,18.999-8.521,18.999-18.995v-9.01C50.255,8.521,41.732,0,31.256,0z M48.255,28.005C48.255,37.376,40.63,45,31.256,45 h-9.917c-0.248,0-0.487,0.092-0.671,0.259l-4.413,3.997v-4.279c0-0.424-0.267-0.802-0.667-0.942 C8.81,41.638,4.255,35.196,4.255,28.005v-9.01C4.255,9.624,11.881,2,21.254,2h10.002c9.374,0,16.999,7.624,16.999,16.995V28.005z">
-                                                        </path>
-                                                        <path
-                                                            d="M39.471,30.493l-6.146-3.992c-0.672-0.437-1.472-0.585-2.255-0.423c-0.784,0.165-1.458,0.628-1.895,1.303l-0.289,0.444 c-2.66-0.879-5.593-2.002-7.349-7.085l0.727-0.632h0c1.248-1.085,1.379-2.983,0.294-4.233l-4.808-5.531 c-0.362-0.417-0.994-0.46-1.411-0.099l-3.019,2.624c-2.648,2.302-1.411,5.707-1.004,6.826c0.018,0.05,0.04,0.098,0.066,0.145 c0.105,0.188,2.612,4.662,6.661,8.786c4.065,4.141,11.404,7.965,11.629,8.076c0.838,0.544,1.781,0.805,2.714,0.805 c1.638,0,3.244-0.803,4.202-2.275l2.178-3.354C40.066,31.413,39.934,30.794,39.471,30.493z M35.91,34.142 c-0.901,1.388-2.763,1.782-4.233,0.834c-0.073-0.038-7.364-3.835-11.207-7.75c-3.592-3.659-5.977-7.724-6.302-8.291 c-0.792-2.221-0.652-3.586,0.464-4.556l2.265-1.968l4.152,4.776c0.369,0.424,0.326,1.044-0.096,1.411l-1.227,1.066 c-0.299,0.26-0.417,0.671-0.3,1.049c2.092,6.798,6.16,8.133,9.13,9.108l0.433,0.143c0.433,0.146,0.907-0.021,1.155-0.403 l0.709-1.092c0.146-0.226,0.37-0.379,0.63-0.434c0.261-0.056,0.527-0.004,0.753,0.143l5.308,3.447L35.91,34.142z">
-                                                        </path>
-                                                        <path
-                                                            d="M28.538,16.247c-0.532-0.153-1.085,0.156-1.236,0.688c-0.151,0.531,0.157,1.084,0.688,1.235 c1.49,0.424,2.677,1.613,3.097,3.104c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.702,0.691-1.234C32.405,18.578,30.69,16.859,28.538,16.247z">
-                                                        </path>
-                                                        <path
-                                                            d="M36.148,22.219c0.09,0,0.181-0.012,0.272-0.037c0.532-0.15,0.841-0.703,0.691-1.234c-1.18-4.183-4.509-7.519-8.689-8.709 c-0.531-0.153-1.084,0.158-1.235,0.689c-0.151,0.531,0.157,1.084,0.688,1.235c3.517,1,6.318,3.809,7.311,7.328 C35.311,21.931,35.711,22.219,36.148,22.219z">
-                                                        </path>
-                                                        <path
-                                                            d="M27.991,7.582c-0.532-0.153-1.085,0.156-1.236,0.689c-0.151,0.531,0.157,1.084,0.688,1.235 c5.959,1.695,10.706,6.453,12.388,12.416c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.703,0.691-1.234C39.887,14.753,34.613,9.467,27.991,7.582z">
-                                                        </path>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-
-                                    <div class="social-icon">
-                                        </svg><svg height="32px" width="32px" fill="#fff" viewBox="-2 -2 24 24"
-                                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
-                                            class="jam jam-whatsapp">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path
-                                                    d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z">
-                                                </path>
-                                                <path
-                                                    d="M14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z">
-                                                </path>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="header-container">
+        <div class="container">
+          <div class="logo-wrapper">
+            <a href="#">
+              <img src="assets/logo/logo svg (full).svg" />
+            </a>
+          </div>
+          <div class="full-menu">
+            <ul>
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="header__call-us">
+            <a href="#about-us">
+              <button class="c-button">Prenotare un appuntamento!</button>
+            </a>
+          </div>
+          <div class="burger-contain">
+            <div class="burger">
+              <div class="bun bun-top"></div>
+              <div class="bun bun-mid"></div>
+              <div class="bun bun-bottom"></div>
             </div>
+          </div>
+
+          <div class="mobile-menu">
+            <div class="overlay">
+              <div class="menu-container">
+                <div class="mobile-menu__top-section">
+                  <div class="mobile-menu-logo close-link">
+                    <a href="#">
+                      <img
+                        src="assets/logo/logo-light.svg"
+                        alt="logo"
+                        srcset=""
+                      />
+                    </a>
+                  </div>
+                  <div class="burger-contain open">
+                    <div class="burger">
+                      <div class="bun bun-top"></div>
+                      <div class="bun bun-mid"></div>
+                      <div class="bun bun-bottom"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-menu-list">
+                  <ul>
+                    <li class="close-link"><a href="#about-us">About us</a></li>
+                    <li class="close-link"><a href="#services">Services</a></li>
+                    <li class="close-link"><a href="#contacts">Contacts</a></li>
+                  </ul>
+                </div>
+
+                <div class="mobile-menu__button">
+                  <a href="#about-us" class="close-link">
+                    <button class="c-button full">
+                      Prenotare un appuntamento!
+                    </button>
+                  </a>
+                </div>
+
+                <div class="mobile-menu__socials">
+                  <div class="socials">
+                    <div class="social-icon">
+                      <svg
+                        fill="#ffffff"
+                        width="32px"
+                        height="32px"
+                        viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#ffffff"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="social-icon">
+                      <svg
+                        fill="#ffffff"
+                        width="32px"
+                        height="32px"
+                        viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#ffffff"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
+                          />
+                          <path
+                            d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="social-icon">
+                      <svg
+                        fill="#ffffff"
+                        width="28px"
+                        height="28px"
+                        viewBox="0 0 24 24"
+                        id="Layer_1"
+                        data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#ffffff"
+                        stroke-width="0.00024000000000000003"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke="#CCCCCC"
+                          stroke-width="0.336"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>telegram</title>
+                          <path
+                            d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="social-icon">
+                      <svg
+                        fill="#ffffff"
+                        height="32px"
+                        width="32px"
+                        version="1.1"
+                        id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="-3.15 -3.15 58.81 58.81"
+                        xml:space="preserve"
+                        stroke="#ffffff"
+                        stroke-width="1.8903960000000002"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g>
+                            <g>
+                              <path
+                                d="M31.256,0H21.254C10.778,0,2.255,8.521,2.255,18.995v9.01c0,7.8,4.793,14.81,12,17.665v5.841 c0,0.396,0.233,0.754,0.595,0.914c0.13,0.058,0.268,0.086,0.405,0.086c0.243,0,0.484-0.089,0.671-0.259L21.725,47h9.531 c10.476,0,18.999-8.521,18.999-18.995v-9.01C50.255,8.521,41.732,0,31.256,0z M48.255,28.005C48.255,37.376,40.63,45,31.256,45 h-9.917c-0.248,0-0.487,0.092-0.671,0.259l-4.413,3.997v-4.279c0-0.424-0.267-0.802-0.667-0.942 C8.81,41.638,4.255,35.196,4.255,28.005v-9.01C4.255,9.624,11.881,2,21.254,2h10.002c9.374,0,16.999,7.624,16.999,16.995V28.005z"
+                              ></path>
+                              <path
+                                d="M39.471,30.493l-6.146-3.992c-0.672-0.437-1.472-0.585-2.255-0.423c-0.784,0.165-1.458,0.628-1.895,1.303l-0.289,0.444 c-2.66-0.879-5.593-2.002-7.349-7.085l0.727-0.632h0c1.248-1.085,1.379-2.983,0.294-4.233l-4.808-5.531 c-0.362-0.417-0.994-0.46-1.411-0.099l-3.019,2.624c-2.648,2.302-1.411,5.707-1.004,6.826c0.018,0.05,0.04,0.098,0.066,0.145 c0.105,0.188,2.612,4.662,6.661,8.786c4.065,4.141,11.404,7.965,11.629,8.076c0.838,0.544,1.781,0.805,2.714,0.805 c1.638,0,3.244-0.803,4.202-2.275l2.178-3.354C40.066,31.413,39.934,30.794,39.471,30.493z M35.91,34.142 c-0.901,1.388-2.763,1.782-4.233,0.834c-0.073-0.038-7.364-3.835-11.207-7.75c-3.592-3.659-5.977-7.724-6.302-8.291 c-0.792-2.221-0.652-3.586,0.464-4.556l2.265-1.968l4.152,4.776c0.369,0.424,0.326,1.044-0.096,1.411l-1.227,1.066 c-0.299,0.26-0.417,0.671-0.3,1.049c2.092,6.798,6.16,8.133,9.13,9.108l0.433,0.143c0.433,0.146,0.907-0.021,1.155-0.403 l0.709-1.092c0.146-0.226,0.37-0.379,0.63-0.434c0.261-0.056,0.527-0.004,0.753,0.143l5.308,3.447L35.91,34.142z"
+                              ></path>
+                              <path
+                                d="M28.538,16.247c-0.532-0.153-1.085,0.156-1.236,0.688c-0.151,0.531,0.157,1.084,0.688,1.235 c1.49,0.424,2.677,1.613,3.097,3.104c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.702,0.691-1.234C32.405,18.578,30.69,16.859,28.538,16.247z"
+                              ></path>
+                              <path
+                                d="M36.148,22.219c0.09,0,0.181-0.012,0.272-0.037c0.532-0.15,0.841-0.703,0.691-1.234c-1.18-4.183-4.509-7.519-8.689-8.709 c-0.531-0.153-1.084,0.158-1.235,0.689c-0.151,0.531,0.157,1.084,0.688,1.235c3.517,1,6.318,3.809,7.311,7.328 C35.311,21.931,35.711,22.219,36.148,22.219z"
+                              ></path>
+                              <path
+                                d="M27.991,7.582c-0.532-0.153-1.085,0.156-1.236,0.689c-0.151,0.531,0.157,1.084,0.688,1.235 c5.959,1.695,10.706,6.453,12.388,12.416c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.703,0.691-1.234C39.887,14.753,34.613,9.467,27.991,7.582z"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="social-icon">
+                      <svg
+                        height="32px"
+                        width="32px"
+                        fill="#fff"
+                        viewBox="-2 -2 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMinYMin"
+                        class="jam jam-whatsapp"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z"
+                          ></path>
+                          <path
+                            d="M14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
     <section class="sticky-contacts">
-        <div class="sticky_contacts__container">
-            <div class="sticky-contacts__opener">
-                <img src="assets/icons/support.svg" alt="">
-            </div>
-            <ul class="sticky-contacts__content">
-                <li>
-                    <a href="https://www.facebook.com/mykolatsidylo" target="_blank">
-                        <img src="assets/icons/facebook.svg" alt="" srcset="">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/dott.mykola.tsidylo/" target="_blank">
-                        <img src="assets/icons/instagram.svg" alt="" srcset="">
-                    </a>
-                </li>
-                <li>
-                    <a href="viber://chat?number=+39 388 8730735" target="_blank">
-                        <img src="assets/icons/viber.svg" alt="" srcset="">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://t.me/+39 388 8730735" target="_blank">
-                        <img src="assets/icons/telegram.svg" alt="" srcset="">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://wa.me/+39 388 8730735" target="_blank">
-                        <img src="assets/icons/whatsapp.svg" alt="" srcset="">
-                    </a>
-                </li>
-                <li>
-                    <a href="tel:+39 388 8730735" target="_blank">
-                        <img src="assets/icons/phone.svg" alt="" srcset="">
-                    </a>
-                </li>
-            </ul>
+      <div class="sticky_contacts__container">
+        <div class="sticky-contacts__opener">
+          <img src="assets/icons/support.svg" alt="" />
         </div>
+        <ul class="sticky-contacts__content">
+          <li>
+            <a href="https://www.facebook.com/mykolatsidylo" target="_blank">
+              <img src="assets/icons/facebook.svg" alt="" srcset="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/dott.mykola.tsidylo/"
+              target="_blank"
+            >
+              <img src="assets/icons/instagram.svg" alt="" srcset="" />
+            </a>
+          </li>
+          <li>
+            <a href="viber://chat?number=+39 388 8730735" target="_blank">
+              <img src="assets/icons/viber.svg" alt="" srcset="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/+39 388 8730735" target="_blank">
+              <img src="assets/icons/telegram.svg" alt="" srcset="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/+39 388 8730735" target="_blank">
+              <img src="assets/icons/whatsapp.svg" alt="" srcset="" />
+            </a>
+          </li>
+          <li>
+            <a href="tel:+39 388 8730735" target="_blank">
+              <img src="assets/icons/phone.svg" alt="" srcset="" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     <main>
-        <section class="s-hero section-padding" style="background-image: url(./assets/cabinet.webp);">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="hero-cta">
-                        <h1>Centro Odontoriatrico</h1>
-                        <p>Take the First Step Towards a Brighter Smile</p>
-                        <a href="#services">
-                            <button class="c-button">Learn More</button>
-                        </a>
-                    </div>
-                </div>
+      <section
+        class="s-hero section-padding"
+        style="background-image: url(./assets/cabinet.webp)"
+      >
+        <div class="wrapper">
+          <div class="container">
+            <div class="hero-cta">
+              <h1>Centro Odontoriatrico</h1>
+              <p>Take the First Step Towards a Brighter Smile</p>
+              <a href="#services">
+                <button class="c-button">Learn More</button>
+              </a>
             </div>
-        </section>
-        <section class="s-services section-padding anchor" id="services">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="c-section-heading">
-                        <h2>Top Quality Dental Care</h2>
-                        <p>
-                            Discover the pinnacle of dental excellence with us. Our unwavering commitment to top-quality
-                            care is evident in every aspect of our practice. From our highly skilled team to our
-                            cutting-edge technology, we spare no effort in ensuring your dental experience is nothing
-                            short of exceptional.</p>
-                    </div>
-                    <div class="services-grig">
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#ffffff">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path fill="#ffffff"
-                                                d="M23,4 C16.372583,4 12,11.6111593 12,21 C12,30.3888407 16.372583,60 23,60 C26.8661992,60 27.3053608,35.4098157 32.5,35.3875505 C38.6946392,35.4098157 38.1338008,60 42,60 C48.627417,60 53,30.3888407 53,21 C53,11.6111593 48.627417,4 42,4 C38.8333333,4 35.6666667,7 32.5,7 C29.3333333,7 26.1666667,4 23,4 Z" />
-                                            <circle cx="23" cy="17" r="5" fill="#c2c2c2" />
-                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
-                                                points="23.594 13.019 25.378 8.296 24.118 6.277" />
-                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
-                                                points="23.75 13.196 31.817 18.498 33.258 22.182" />
-                                            <path stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
-                                                d="M31.7867053,18.5430823 L36.4124343,17.1692448" />
-                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
-                                                points="22.625 18.807 19.025 24.74 23.428 28.916" />
-                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
-                                                points="19.533 17.225 15.149 15.342 13.802 17.773" />
-                                            <polyline stroke="#c2c2c2" stroke-linecap="round" stroke-width="2"
-                                                points="24.051 19.661 26.982 26.302 36.951 28.427" />
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h3>Oral surgery</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolores nobis eveniet!</p>
-                        </div>
-
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#000000">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path fill="#ffffff"
-                                                d="M51.8137386,32 C52.5838535,26.7174939 53,21.8964501 53,19 C53,9.61115925 48.627417,2 42,2 C38.8333333,2 35.6666667,5 32.5,5 C29.3333333,5 26.1666667,2 23,2 C16.372583,2 12,9.61115925 12,19 C12,21.8964501 12.4161465,26.7174939 13.1862614,32 L51.8137386,32 L51.8137386,32 Z" />
-                                            <polygon fill="#ffffff"
-                                                points="24 32 41 32 41 39 38 43 38 58 32.5 62 27 58 27 43 24 39" />
-                                            <path stroke="#FFF" stroke-linecap="round" stroke-width="2"
-                                                d="M25,6 C20.581722,6 17,9.581722 17,14" />
-                                            <polygon fill="#D8D8D8" points="27 51 38 54 38 56 27 53" />
-                                            <polygon fill="#D8D8D8" points="27 47 38 50 38 52 27 49" />
-                                            <polygon fill="#D8D8D8" points="27 43 38 46 38 48 27 45" />
-                                        </g>
-                                    </g>
-
-                                </svg>
-                            </div>
-                            <h3>Implants</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolores nobis eveniet!</p>
-                        </div>
-
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#ffffff" stroke="#ffffff">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path fill="#ffffff"
-                                                d="M33,5 C26.372583,5 22,12.6111593 22,22 C22,31.3888407 26.372583,61 33,61 C36.8661992,61 37.3053608,36.4098157 42.5,36.3875505 C48.6946392,36.4098157 48.1338008,61 52,61 C58.627417,61 63,31.3888407 63,22 C63,12.6111593 58.627417,5 52,5 C48.8333333,5 45.6666667,8 42.5,8 C39.3333333,8 36.1666667,5 33,5 Z" />
-                                            <g transform="rotate(90 9.5 9.5)">
-                                                <path fill="#ffffff"
-                                                    d="M0,11 C0,9.8954305 0.904756604,9 2.00134006,9 L42.3792329,9 L61.0277499,6.41241601 C62.6692783,6.18464494 64,7.34967041 64,9.00925446 L64,9.99074554 C64,11.6527109 62.663269,13 60.9989882,13 L2.00329863,13 C0.896907345,13 0,12.1122704 0,11 L0,11 Z" />
-                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                    d="M3,7 L3,0.91723747" />
-                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                    d="M7,7 L7,0.91723747" />
-                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                    d="M11,7 L11,0.91723747" />
-                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                    d="M15,7 L15,0.91723747" />
-                                                <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                    d="M19,7 L19,0.91723747" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h3>Dental care</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit voluptates vel est,
-                                voluptas aperiam laudantium quia.</p>
-                        </div>
-
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#000000">
-
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path fill="#ffffff"
-                                                d="M35.0714286,21 C30.8109462,21 28,25.8928881 28,31.9285714 C28,37.9642548 30.8109462,57 35.0714286,57 C37.5568423,57 38.1962339,41.1920244 41.5356448,41.177711 C45.5179129,41.1920244 44.8003005,57 47.2857143,57 C51.5461966,57 54.3571429,37.9642548 54.3571429,31.9285714 C54.3571429,25.8928881 51.5461966,21 47.2857143,21 C45.25,21 43.5713591,22.9630984 41.5356448,22.9630984 C39.4999305,22.9630984 37.1071429,21 35.0714286,21 Z" />
-                                            <path stroke="#ffffff" stroke-linecap="round" stroke-width="2"
-                                                d="M25,20 L17,12" />
-                                            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M32 14L32 4M9 27L20 27" />
-                                        </g>
-                                    </g>
-
-                                </svg>
-                            </div>
-                            <h3>Dental service</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#ffffff" stroke="#ffffff">
-
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <polyline stroke="#ffffff" stroke-linecap="round" stroke-width="2"
-                                                points="28.986 32.695 28.986 10 23 10" />
-                                            <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                d="M30,24 L34,24" />
-                                            <circle cx="19" cy="10" r="5" fill="#ffffff" />
-                                            <path fill="#ffffff" fill-rule="nonzero"
-                                                d="M55.1101377,47.7175322 C56.0889464,48.2293987 57.2973774,47.8508672 57.8092438,46.8720585 C58.3211103,45.8932498 57.9425788,44.6848188 56.9637701,44.1729523 L33.4855051,32.039344 L20.9705334,32.039344 L9.78869638,15.8283084 C9.15693144,14.9222473 7.91027706,14.6998863 7.00421589,15.3316512 C6.09815473,15.9634162 5.87579372,17.2100705 6.50755867,18.1161317 L18.985921,36.0222833 L32.6054267,36.0222833 L55.1101377,47.7175322 Z" />
-                                            <rect width="10" height="6" x="34" y="21" fill="#ffffff" />
-                                            <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                d="M37 24L37 29M41 24L41 29" />
-                                            <polygon fill="#ffffff" points="19 36 31 36 27.057 40.011 31 46 24 46" />
-                                            <polygon fill="#ffffff" points="19 46 31 46 31 53 10 53" />
-                                            <path stroke="#ffffff" stroke-linecap="square" stroke-width="2"
-                                                d="M2,54 L61.008474,54" />
-                                        </g>
-                                    </g>
-
-                                </svg>
-                            </div>
-                            <h3>Emergency service</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis vero
-                                tempore dolorum error esse fugiat?</p>
-                        </div>
-
-                        <div class="c-service-card">
-                            <div class="card-image-container">
-                                <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#ffffff">
-
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path fill="#ffffff"
-                                                d="M23,5 C16.372583,5 12,12.6111593 12,22 C12,31.3888407 16.372583,61 23,61 C26.8661992,61 27.3053608,36.4098157 32.5,36.3875505 C38.6946392,36.4098157 38.1338008,61 42,61 C48.627417,61 53,31.3888407 53,22 C53,12.6111593 48.627417,5 42,5 C38.8333333,5 35.6666667,8 32.5,8 C29.3333333,8 26.1666667,5 23,5 Z" />
-                                            <circle cx="32" cy="22" r="6" stroke="#286eb8" stroke-linecap="round"
-                                                stroke-width="2" />
-                                            <path stroke="#286eb8" stroke-linecap="square" stroke-width="2"
-                                                d="M32 12L32 32M22 22L42.0249844 22" />
-                                        </g>
-                                    </g>
-
-                                </svg>
-                            </div>
-                            <h3>Tooth extract</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-
-                    </div>
-                </div>
-        </section>
-        <section class="s-about-us section-padding anchor" id="about-us"
-            style="background-image: url('assets/cabinet_2.webp');">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="s-about-us__content">
-                        <div class="s-about-us__image">
-                            <img src="assets/dentist.webp" alt="dentist" width="400" height="auto">
-                        </div>
-                        <div class="s-about-us__info">
-                            <div class="c-section-heading all-left">
-                                <h2>Top Quality Dental Care</h2>
-                                <p>
-                                    Discover the pinnacle of dental excellence with us. Our unwavering commitment to
-                                    top-quality
-                                    care is evident in every aspect of our practice. From our highly skilled team to our
-                                    cutting-edge technology, we spare no effort in ensuring your dental experience is
-                                    nothing
-                                    short of exceptional.</p>
-                            </div>
-
-                            <div class="s-about-us__info__cta">
-                                <h4 class="">This should be some text in "call to action" style! </h4>
-                                <div class="contact-methods-wrapper">
-                                    <a href="https://prenota.alfadocs.com/p/verona-ricaricadent-verona-21155"
-                                        target="_blank">
-                                        <button class="c-button online">via Online</button>
-                                    </a>
-                                    <a href="https://wa.me/+39 388 8730735" target="_blank">
-                                        <button class="c-button whatsApp">via WhatsApp</button>
-                                    </a>
-                                    <a href="tel:+39 388 8730735" target="_blank">
-                                        <button class="c-button phone">Call us</button>
-                                    </a>
-                                    <a href="#contacts">
-                                        <button class="c-button contact-form">by Contact form</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-services section-padding anchor" id="services">
+        <div class="wrapper">
+          <div class="container">
+            <div class="c-section-heading">
+              <h2>Top Quality Dental Care</h2>
+              <p>
+                Discover the pinnacle of dental excellence with us. Our
+                unwavering commitment to top-quality care is evident in every
+                aspect of our practice. From our highly skilled team to our
+                cutting-edge technology, we spare no effort in ensuring your
+                dental experience is nothing short of exceptional.
+              </p>
             </div>
-        </section>
-        <section class="s-gallery section-padding">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="c-section-heading dark">
-                        <h2>Gallery</h2>
-                    </div>
-                    <div class="c-gallery">
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_12.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_12.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_1.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_1.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_3.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_3.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_5.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_5.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_7.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_7.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_8.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_8.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_11.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_11.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_13.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_13.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_14.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_14.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_18.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_18.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_16.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_16.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="assets/gallery/gallery_17.webp" class="popup-link">
-                                <img src="assets/gallery/gallery_17.webp" alt="" width="300" height="auto">
-                            </a>
-                        </div>
-                    </div>
+            <div class="services-grig">
+              <div class="c-service-card">
+                <div class="card-image-container">
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <g id="SVGRepo_iconCarrier">
+                      <g fill="none" fill-rule="evenodd">
+                        <path
+                          fill="#ffffff"
+                          d="M23,4 C16.372583,4 12,11.6111593 12,21 C12,30.3888407 16.372583,60 23,60 C26.8661992,60 27.3053608,35.4098157 32.5,35.3875505 C38.6946392,35.4098157 38.1338008,60 42,60 C48.627417,60 53,30.3888407 53,21 C53,11.6111593 48.627417,4 42,4 C38.8333333,4 35.6666667,7 32.5,7 C29.3333333,7 26.1666667,4 23,4 Z"
+                        />
+                        <circle cx="23" cy="17" r="5" fill="#c2c2c2" />
+                        <polyline
+                          stroke="#c2c2c2"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          points="23.594 13.019 25.378 8.296 24.118 6.277"
+                        />
+                        <polyline
+                          stroke="#c2c2c2"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          points="23.75 13.196 31.817 18.498 33.258 22.182"
+                        />
+                        <path
+                          stroke="#c2c2c2"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          d="M31.7867053,18.5430823 L36.4124343,17.1692448"
+                        />
+                        <polyline
+                          stroke="#c2c2c2"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          points="22.625 18.807 19.025 24.74 23.428 28.916"
+                        />
+                        <polyline
+                          stroke="#c2c2c2"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          points="19.533 17.225 15.149 15.342 13.802 17.773"
+                        />
+                        <polyline
+                          stroke="#c2c2c2"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          points="24.051 19.661 26.982 26.302 36.951 28.427"
+                        />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-            </div>
-        </section>
-        <section class="s-testimonials section-padding">
-            <div class="wrapper">
-                <div class="container" style="position: relative;">
-                    <div class="c-section-heading dark">
-                        <h2>Testimonials</h2>
-                    </div>
-                    <div class="swiper-outer">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="c-feedback">
-                                        <p>Ho trovato recensioni positive da parte dei clienti e ho deciso di provarlo
-                                            io stesso.
-                                            La segretaria è attenta e responsabile.
-                                            Il dottor Mykola Tsidylo è molto qualificato, sono soddisfatto del risultato
-                                            dell'otturazione dei denti.
-                                            Ho fatto fare anche una pulizia igienica dalla Dottoressa Aya, grazie.
-                                            Sto programmando di farmi un impianto dentale nella stessa clinica.
-                                            Sono molto soddisfatto di tutto, lo consiglio a tutti.</p>
+                <h3>Oral surgery</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+                  dolores nobis eveniet!
+                </p>
+              </div>
 
-                                        <h3>Bohdan Shevchenko</h3>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="c-feedback">
-                                        <p>Ho trovato la clinica su internet e sono rimasta molto contenta. Il dottore
-                                            Mykola è molto attento ai dettagli e spiega tutto con pazienza e
-                                            professionalità. Luminita, la ragazza alla reception, è sempre gentilissima.
-                                            Solitamente mi sento…</p>
-
-                                        <h3>Каро Каро</h3>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="c-feedback">
-                                        <p>Le migliore impressioni su questa clinica dentistica. Personale cordiale e
-                                            professionale. Mille grazie al Dr. Mykola Tsidylo per il lavoro veloce e di
-                                            alta qualità.</p>
-                                        <h3>Larisa Olkhovskaya</h3>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="c-feedback">
-                                        <p>Sono andata dal dottore Nicola perché mi è stato consigliato. Mi sono trovata
-                                            molto bene. Ho fatto la pulizia dei denti con la Dottoressa Aya, sono
-                                            rimasta molto soddisfatta. Gentilissima la segreteria.
-                                            Consiglio a tutti questo Centro!</p>
-                                        <h3>Tamila Aksentii</h3>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="c-feedback">
-                                        <p>Clinica molto curata e attrezzata.
-                                            Personale preparato
-                                            La segretaria Luminita, che ti accoglie fin dall’inizio è davvero
-                                            gentilissima e…</p>
-                                        <h3>Fabio Vezzosi</h3>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="c-feedback">
-                                        <p>Ero già stata in questo centro e sono tornata; esperienza positiva: i dottori
-                                            sono molto competenti e umani così come tutte le dipendenti. L'apertura con
-                                            orario continuato permette di organizzarsi senza problemi. Sono stata ben
-                                            assistita e ho risolto velocemente. Il prezzo l'ho trovato più che onesto.
-                                            Lo consiglio.</p>
-                                        <h3>Nunziella Auditore</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="swiper-button swiper-button-prev"></div>
-                        <div class="swiper-button swiper-button-next"></div>
-                    </div>
+              <div class="c-service-card">
+                <div class="card-image-container">
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <g id="SVGRepo_iconCarrier">
+                      <g fill="none" fill-rule="evenodd">
+                        <path
+                          fill="#ffffff"
+                          d="M51.8137386,32 C52.5838535,26.7174939 53,21.8964501 53,19 C53,9.61115925 48.627417,2 42,2 C38.8333333,2 35.6666667,5 32.5,5 C29.3333333,5 26.1666667,2 23,2 C16.372583,2 12,9.61115925 12,19 C12,21.8964501 12.4161465,26.7174939 13.1862614,32 L51.8137386,32 L51.8137386,32 Z"
+                        />
+                        <polygon
+                          fill="#ffffff"
+                          points="24 32 41 32 41 39 38 43 38 58 32.5 62 27 58 27 43 24 39"
+                        />
+                        <path
+                          stroke="#FFF"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          d="M25,6 C20.581722,6 17,9.581722 17,14"
+                        />
+                        <polygon
+                          fill="#D8D8D8"
+                          points="27 51 38 54 38 56 27 53"
+                        />
+                        <polygon
+                          fill="#D8D8D8"
+                          points="27 47 38 50 38 52 27 49"
+                        />
+                        <polygon
+                          fill="#D8D8D8"
+                          points="27 43 38 46 38 48 27 45"
+                        />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-            </div>
-        </section>
-        <section class="s-map section-padding anchor" id="contacts">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="c-section-heading dark">
-                        <h2>Contatti</h2>
-                        <p>Vi preghiamo di contattarci tramite il modulo qui sotto o utilizzando le informazioni di
-                            contatto. I nostri specialisti sono sempre pronti a rispondere alle vostre domande e ad
-                            aiutarvi
-                            con la prenotazione di un appuntamento.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper">
-                <div class="container">
-                    <div class="c-form">
-                        <div class="form-heading">
-                            <h3>Mandaci un messaggio</h3>
-                            <p class="form-hint">* I campi contrassegnati con un asterisco sono obbligatori</p>
-                        </div>
-                        <form action="">
-                            <div class="    inputs-holder">
-                                <label for="name" class="name-label">
-                                    <input id="name" type="text" placeholder="*Nome" required>
-                                </label>
-                                <label for="phone" class="phone-label">
-                                    <input id="phone" type="tel" placeholder="Telefono">
-                                </label>
-                            </div>
-                            <div class="    inputs-holder">
-                                <label for="email" class="email-label">
-                                    <input id="email" type="email" placeholder="*Email" required>
-                                </label>
-                                <label for="date-input" class="date-label">
-                                    <input id="date-input" type="date" placeholder="date">
-                                </label>
-                            </div>
+                <h3>Implants</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+                  dolores nobis eveniet!
+                </p>
+              </div>
 
-                            <label for="message" class="message-label">
-                                <textarea id="message" type="text" placeholder="*Motivo della visita"
-                                    required></textarea>
-                            </label>
-                            <button class="c-button full">Send message</button>
-                        </form>
-                    </div>
+              <div class="c-service-card">
+                <div class="card-image-container">
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ffffff"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <g id="SVGRepo_iconCarrier">
+                      <g fill="none" fill-rule="evenodd">
+                        <path
+                          fill="#ffffff"
+                          d="M33,5 C26.372583,5 22,12.6111593 22,22 C22,31.3888407 26.372583,61 33,61 C36.8661992,61 37.3053608,36.4098157 42.5,36.3875505 C48.6946392,36.4098157 48.1338008,61 52,61 C58.627417,61 63,31.3888407 63,22 C63,12.6111593 58.627417,5 52,5 C48.8333333,5 45.6666667,8 42.5,8 C39.3333333,8 36.1666667,5 33,5 Z"
+                        />
+                        <g transform="rotate(90 9.5 9.5)">
+                          <path
+                            fill="#ffffff"
+                            d="M0,11 C0,9.8954305 0.904756604,9 2.00134006,9 L42.3792329,9 L61.0277499,6.41241601 C62.6692783,6.18464494 64,7.34967041 64,9.00925446 L64,9.99074554 C64,11.6527109 62.663269,13 60.9989882,13 L2.00329863,13 C0.896907345,13 0,12.1122704 0,11 L0,11 Z"
+                          />
+                          <path
+                            stroke="#ffffff"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                            d="M3,7 L3,0.91723747"
+                          />
+                          <path
+                            stroke="#ffffff"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                            d="M7,7 L7,0.91723747"
+                          />
+                          <path
+                            stroke="#ffffff"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                            d="M11,7 L11,0.91723747"
+                          />
+                          <path
+                            stroke="#ffffff"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                            d="M15,7 L15,0.91723747"
+                          />
+                          <path
+                            stroke="#ffffff"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                            d="M19,7 L19,0.91723747"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-            </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d699.6685015625794!2d10.980862269636514!3d45.456224938915526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781e2074fe783b7%3A0xf334eb045b4d7a8a!2sVia%20Goffredo%20Mameli%2C%20152!5e0!3m2!1suk!2sua!4v1718446065972!5m2!1suk!2sua"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section class="s-contact-info section-padding">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="info-row">
-                        <div class="info-item">
-                            <a href="tel:+39 0774 8271469" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_17_19834)">
-                                        <path
-                                            d="M21 15.46L15.73 14.85L13.21 17.37C10.38 15.93 8.06002 13.62 6.62002 10.78L9.15002 8.25L8.54002 3H3.03002C2.45002 13.18 10.82 21.55 21 20.97V15.46Z"
-                                            fill="#1A374C" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_17_19834">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <p>
-                                    +39 0774 8271469
-                                </p>
-                            </a>
-                        </div>
+                <h3>Dental care</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  sit voluptates vel est, voluptas aperiam laudantium quia.
+                </p>
+              </div>
 
-                        <div class="info-item">
-                            <a href="mailto:simple.mail@gmail.com" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_17_19784)">
-                                        <path d="M22 4H2.01L2 20H22V4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z"
-                                            fill="#1A374C" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_17_19784">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <p>
-                                    simple.mail@gmail.com
-                                </p>
-                            </a>
-                        </div>
-                        <div class="info-item">
-                            <a href="https://www.google.com/maps/place/Via+Goffredo+Mameli,+152,+37124+Verona+VR,+%D0%86%D1%82%D0%B0%D0%BB%D1%96%D1%8F/@45.45602,10.981707,19z/data=!4m6!3m5!1s0x4781e2074fe783b7:0xf334eb045b4d7a8a!8m2!3d45.4560824!4d10.9817041!16s%2Fg%2F11fx7g4y7n?hl=uk&entry=ttu"
-                                target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_17_20265)">
-                                        <path
-                                            d="M12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12ZM12 2C7.8 2 4 5.22 4 10.2C4 13.52 6.67 17.45 12 22C17.33 17.45 20 13.52 20 10.2C20 5.22 16.2 2 12 2Z"
-                                            fill="#1A374C" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_17_20265">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <p>
-                                    Caserta CE, via Tazzoli
-                                </p>
-                            </a>
-                        </div>
-                        <div class="info-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_11_5469)">
-                                    <path
-                                        d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"
-                                        fill="#1A374C" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_11_5469">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <div class="work-hours">
-                                <p>Lun - Ven: 09:00 - 19:00</p>
-                                <p>Sab - Dom: 09:00 - 19:00</p>
-                            </div>
-                        </div>
-                    </div>
+              <div class="c-service-card">
+                <div class="card-image-container">
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <g fill="none" fill-rule="evenodd">
+                        <path
+                          fill="#ffffff"
+                          d="M35.0714286,21 C30.8109462,21 28,25.8928881 28,31.9285714 C28,37.9642548 30.8109462,57 35.0714286,57 C37.5568423,57 38.1962339,41.1920244 41.5356448,41.177711 C45.5179129,41.1920244 44.8003005,57 47.2857143,57 C51.5461966,57 54.3571429,37.9642548 54.3571429,31.9285714 C54.3571429,25.8928881 51.5461966,21 47.2857143,21 C45.25,21 43.5713591,22.9630984 41.5356448,22.9630984 C39.4999305,22.9630984 37.1071429,21 35.0714286,21 Z"
+                        />
+                        <path
+                          stroke="#ffffff"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          d="M25,20 L17,12"
+                        />
+                        <path
+                          stroke="#ffffff"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M32 14L32 4M9 27L20 27"
+                        />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-            </div>
-        </section>
+                <h3>Dental service</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
 
+              <div class="c-service-card">
+                <div class="card-image-container">
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ffffff"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <g fill="none" fill-rule="evenodd">
+                        <polyline
+                          stroke="#ffffff"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          points="28.986 32.695 28.986 10 23 10"
+                        />
+                        <path
+                          stroke="#ffffff"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                          d="M30,24 L34,24"
+                        />
+                        <circle cx="19" cy="10" r="5" fill="#ffffff" />
+                        <path
+                          fill="#ffffff"
+                          fill-rule="nonzero"
+                          d="M55.1101377,47.7175322 C56.0889464,48.2293987 57.2973774,47.8508672 57.8092438,46.8720585 C58.3211103,45.8932498 57.9425788,44.6848188 56.9637701,44.1729523 L33.4855051,32.039344 L20.9705334,32.039344 L9.78869638,15.8283084 C9.15693144,14.9222473 7.91027706,14.6998863 7.00421589,15.3316512 C6.09815473,15.9634162 5.87579372,17.2100705 6.50755867,18.1161317 L18.985921,36.0222833 L32.6054267,36.0222833 L55.1101377,47.7175322 Z"
+                        />
+                        <rect
+                          width="10"
+                          height="6"
+                          x="34"
+                          y="21"
+                          fill="#ffffff"
+                        />
+                        <path
+                          stroke="#ffffff"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                          d="M37 24L37 29M41 24L41 29"
+                        />
+                        <polygon
+                          fill="#ffffff"
+                          points="19 36 31 36 27.057 40.011 31 46 24 46"
+                        />
+                        <polygon
+                          fill="#ffffff"
+                          points="19 46 31 46 31 53 10 53"
+                        />
+                        <path
+                          stroke="#ffffff"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                          d="M2,54 L61.008474,54"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Emergency service</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur perspiciatis vero tempore dolorum error esse
+                  fugiat?
+                </p>
+              </div>
+
+              <div class="c-service-card">
+                <div class="card-image-container">
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <g fill="none" fill-rule="evenodd">
+                        <path
+                          fill="#ffffff"
+                          d="M23,5 C16.372583,5 12,12.6111593 12,22 C12,31.3888407 16.372583,61 23,61 C26.8661992,61 27.3053608,36.4098157 32.5,36.3875505 C38.6946392,36.4098157 38.1338008,61 42,61 C48.627417,61 53,31.3888407 53,22 C53,12.6111593 48.627417,5 42,5 C38.8333333,5 35.6666667,8 32.5,8 C29.3333333,8 26.1666667,5 23,5 Z"
+                        />
+                        <circle
+                          cx="32"
+                          cy="22"
+                          r="6"
+                          stroke="#286eb8"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          stroke="#286eb8"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                          d="M32 12L32 32M22 22L42.0249844 22"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Tooth extract</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="s-about-us section-padding anchor"
+        id="about-us"
+        style="background-image: url('assets/cabinet_2.webp')"
+      >
+        <div class="wrapper">
+          <div class="container">
+            <div class="s-about-us__content">
+              <div class="s-about-us__image">
+                <img
+                  src="assets/dentist.webp"
+                  alt="dentist"
+                  width="400"
+                  height="auto"
+                />
+              </div>
+              <div class="s-about-us__info">
+                <div class="c-section-heading all-left">
+                  <h2>Top Quality Dental Care</h2>
+                  <p>
+                    Discover the pinnacle of dental excellence with us. Our
+                    unwavering commitment to top-quality care is evident in
+                    every aspect of our practice. From our highly skilled team
+                    to our cutting-edge technology, we spare no effort in
+                    ensuring your dental experience is nothing short of
+                    exceptional.
+                  </p>
+                </div>
+
+                <div class="s-about-us__info__cta">
+                  <h4 class="">
+                    This should be some text in "call to action" style!
+                  </h4>
+                  <div class="contact-methods-wrapper">
+                    <a
+                      href="https://prenota.alfadocs.com/p/verona-ricaricadent-verona-21155"
+                      target="_blank"
+                    >
+                      <button class="c-button online">via Online</button>
+                    </a>
+                    <a href="https://wa.me/+39 388 8730735" target="_blank">
+                      <button class="c-button whatsApp">via WhatsApp</button>
+                    </a>
+                    <a href="tel:+39 388 8730735" target="_blank">
+                      <button class="c-button phone">Call us</button>
+                    </a>
+                    <a href="#contacts">
+                      <button class="c-button contact-form">
+                        by Contact form
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-gallery section-padding">
+        <div class="wrapper">
+          <div class="container">
+            <div class="c-section-heading dark">
+              <h2>Gallery</h2>
+            </div>
+            <div class="c-gallery">
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_12.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_12.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_1.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_1.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_3.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_3.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_5.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_5.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_7.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_7.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_8.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_8.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_11.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_11.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_13.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_13.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_14.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_14.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_18.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_18.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_16.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_16.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a href="assets/gallery/gallery_17.webp" class="popup-link">
+                  <img
+                    src="assets/gallery/gallery_17.webp"
+                    alt=""
+                    width="300"
+                    height="auto"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-testimonials section-padding">
+        <div class="wrapper">
+          <div class="container" style="position: relative">
+            <div class="c-section-heading dark">
+              <h2>Testimonials</h2>
+            </div>
+            <div class="swiper-outer">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="c-feedback">
+                      <p>
+                        Ho trovato recensioni positive da parte dei clienti e ho
+                        deciso di provarlo io stesso. La segretaria è attenta e
+                        responsabile. Il dottor Mykola Tsidylo è molto
+                        qualificato, sono soddisfatto del risultato
+                        dell'otturazione dei denti. Ho fatto fare anche una
+                        pulizia igienica dalla Dottoressa Aya, grazie. Sto
+                        programmando di farmi un impianto dentale nella stessa
+                        clinica. Sono molto soddisfatto di tutto, lo consiglio a
+                        tutti.
+                      </p>
+
+                      <h3>Bohdan Shevchenko</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="c-feedback">
+                      <p>
+                        Ho trovato la clinica su internet e sono rimasta molto
+                        contenta. Il dottore Mykola è molto attento ai dettagli
+                        e spiega tutto con pazienza e professionalità. Luminita,
+                        la ragazza alla reception, è sempre gentilissima.
+                        Solitamente mi sento…
+                      </p>
+
+                      <h3>Каро Каро</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="c-feedback">
+                      <p>
+                        Le migliore impressioni su questa clinica dentistica.
+                        Personale cordiale e professionale. Mille grazie al Dr.
+                        Mykola Tsidylo per il lavoro veloce e di alta qualità.
+                      </p>
+                      <h3>Larisa Olkhovskaya</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="c-feedback">
+                      <p>
+                        Sono andata dal dottore Nicola perché mi è stato
+                        consigliato. Mi sono trovata molto bene. Ho fatto la
+                        pulizia dei denti con la Dottoressa Aya, sono rimasta
+                        molto soddisfatta. Gentilissima la segreteria. Consiglio
+                        a tutti questo Centro!
+                      </p>
+                      <h3>Tamila Aksentii</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="c-feedback">
+                      <p>
+                        Clinica molto curata e attrezzata. Personale preparato
+                        La segretaria Luminita, che ti accoglie fin dall’inizio
+                        è davvero gentilissima e…
+                      </p>
+                      <h3>Fabio Vezzosi</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="c-feedback">
+                      <p>
+                        Ero già stata in questo centro e sono tornata;
+                        esperienza positiva: i dottori sono molto competenti e
+                        umani così come tutte le dipendenti. L'apertura con
+                        orario continuato permette di organizzarsi senza
+                        problemi. Sono stata ben assistita e ho risolto
+                        velocemente. Il prezzo l'ho trovato più che onesto. Lo
+                        consiglio.
+                      </p>
+                      <h3>Nunziella Auditore</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper-button swiper-button-prev"></div>
+              <div class="swiper-button swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-map section-padding anchor" id="contacts">
+        <div class="wrapper">
+          <div class="container">
+            <div class="c-section-heading dark">
+              <h2>Contatti</h2>
+              <p>
+                Vi preghiamo di contattarci tramite il modulo qui sotto o
+                utilizzando le informazioni di contatto. I nostri specialisti
+                sono sempre pronti a rispondere alle vostre domande e ad
+                aiutarvi con la prenotazione di un appuntamento.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="container">
+            <div class="c-form">
+              <div class="form-heading">
+                <h3>Mandaci un messaggio</h3>
+                <p class="form-hint">
+                  * I campi contrassegnati con un asterisco sono obbligatori
+                </p>
+              </div>
+              <form action="">
+                <div class="inputs-holder">
+                  <label for="name" class="name-label">
+                    <input id="name" type="text" placeholder="*Nome" required />
+                  </label>
+                  <label for="phone" class="phone-label">
+                    <input id="phone" type="tel" placeholder="Telefono" />
+                  </label>
+                </div>
+                <div class="inputs-holder">
+                  <label for="email" class="email-label">
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="*Email"
+                      required
+                    />
+                  </label>
+                  <label for="date-input" class="date-label">
+                    <input id="date-input" type="date" placeholder="date" />
+                  </label>
+                </div>
+
+                <label for="message" class="message-label">
+                  <textarea
+                    id="message"
+                    type="text"
+                    placeholder="*Motivo della visita"
+                    required
+                  ></textarea>
+                </label>
+                <button class="c-button full">Send message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d699.6685015625794!2d10.980862269636514!3d45.456224938915526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781e2074fe783b7%3A0xf334eb045b4d7a8a!2sVia%20Goffredo%20Mameli%2C%20152!5e0!3m2!1suk!2sua!4v1718446065972!5m2!1suk!2sua"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <section class="s-contact-info section-padding">
+        <div class="wrapper">
+          <div class="container">
+            <div class="info-row">
+              <div class="info-item">
+                <a href="tel:+39 0774 8271469" target="_blank">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_17_19834)">
+                      <path
+                        d="M21 15.46L15.73 14.85L13.21 17.37C10.38 15.93 8.06002 13.62 6.62002 10.78L9.15002 8.25L8.54002 3H3.03002C2.45002 13.18 10.82 21.55 21 20.97V15.46Z"
+                        fill="#1A374C"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_17_19834">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p>+39 0774 8271469</p>
+                </a>
+              </div>
+
+              <div class="info-item">
+                <a href="mailto:simple.mail@gmail.com" target="_blank">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_17_19784)">
+                      <path
+                        d="M22 4H2.01L2 20H22V4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z"
+                        fill="#1A374C"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_17_19784">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p>simple.mail@gmail.com</p>
+                </a>
+              </div>
+              <div class="info-item">
+                <a
+                  href="https://www.google.com/maps/place/Via+Goffredo+Mameli,+152,+37124+Verona+VR,+%D0%86%D1%82%D0%B0%D0%BB%D1%96%D1%8F/@45.45602,10.981707,19z/data=!4m6!3m5!1s0x4781e2074fe783b7:0xf334eb045b4d7a8a!8m2!3d45.4560824!4d10.9817041!16s%2Fg%2F11fx7g4y7n?hl=uk&entry=ttu"
+                  target="_blank"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_17_20265)">
+                      <path
+                        d="M12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12ZM12 2C7.8 2 4 5.22 4 10.2C4 13.52 6.67 17.45 12 22C17.33 17.45 20 13.52 20 10.2C20 5.22 16.2 2 12 2Z"
+                        fill="#1A374C"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_17_20265">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p>Caserta CE, via Tazzoli</p>
+                </a>
+              </div>
+              <div class="info-item">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_11_5469)">
+                    <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"
+                      fill="#1A374C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_11_5469">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div class="work-hours">
+                  <p>Lun - Ven: 09:00 - 19:00</p>
+                  <p>Sab - Dom: 09:00 - 19:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-
     <footer>
-        <div class="wrapper">
-            <div class="container">
-                <div class="copyright">© YouDent 2024</div>
-                <div class="socials">
-                    <div class="social-icon facebook">
-                        <a href="https://www.facebook.com/mykolatsidylo" target="_blank">
-                            <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
-                                xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z" />
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="social-icon instagram">
-                        <a href="https://www.instagram.com/dott.mykola.tsidylo/" target="_blank">
-                            <svg fill="#ffffff" width="32px" height="32px" viewBox="0 0 32 32"
-                                xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z" />
-                                    <path
-                                        d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z" />
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="social-icon telegram">
-                        <a href="https://t.me/+39 388 8730735" target="_blank">
-                            <svg fill="#ffffff" width="28px" height="28px" viewBox="0 0 24 24" id="Layer_1"
-                                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
-                                stroke-width="0.00024000000000000003">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke="#CCCCCC" stroke-width="0.336"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <title>telegram</title>
-                                    <path
-                                        d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z">
-                                    </path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="social-icon viber">
-                        <a href="viber://chat?number=+39 388 8730735" target="_blank">
-                            <svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Capa_1"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="-3.15 -3.15 58.81 58.81" xml:space="preserve" stroke="#ffffff"
-                                stroke-width="1.8903960000000002">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <g>
-                                        <g>
-                                            <path
-                                                d="M31.256,0H21.254C10.778,0,2.255,8.521,2.255,18.995v9.01c0,7.8,4.793,14.81,12,17.665v5.841 c0,0.396,0.233,0.754,0.595,0.914c0.13,0.058,0.268,0.086,0.405,0.086c0.243,0,0.484-0.089,0.671-0.259L21.725,47h9.531 c10.476,0,18.999-8.521,18.999-18.995v-9.01C50.255,8.521,41.732,0,31.256,0z M48.255,28.005C48.255,37.376,40.63,45,31.256,45 h-9.917c-0.248,0-0.487,0.092-0.671,0.259l-4.413,3.997v-4.279c0-0.424-0.267-0.802-0.667-0.942 C8.81,41.638,4.255,35.196,4.255,28.005v-9.01C4.255,9.624,11.881,2,21.254,2h10.002c9.374,0,16.999,7.624,16.999,16.995V28.005z">
-                                            </path>
-                                            <path
-                                                d="M39.471,30.493l-6.146-3.992c-0.672-0.437-1.472-0.585-2.255-0.423c-0.784,0.165-1.458,0.628-1.895,1.303l-0.289,0.444 c-2.66-0.879-5.593-2.002-7.349-7.085l0.727-0.632h0c1.248-1.085,1.379-2.983,0.294-4.233l-4.808-5.531 c-0.362-0.417-0.994-0.46-1.411-0.099l-3.019,2.624c-2.648,2.302-1.411,5.707-1.004,6.826c0.018,0.05,0.04,0.098,0.066,0.145 c0.105,0.188,2.612,4.662,6.661,8.786c4.065,4.141,11.404,7.965,11.629,8.076c0.838,0.544,1.781,0.805,2.714,0.805 c1.638,0,3.244-0.803,4.202-2.275l2.178-3.354C40.066,31.413,39.934,30.794,39.471,30.493z M35.91,34.142 c-0.901,1.388-2.763,1.782-4.233,0.834c-0.073-0.038-7.364-3.835-11.207-7.75c-3.592-3.659-5.977-7.724-6.302-8.291 c-0.792-2.221-0.652-3.586,0.464-4.556l2.265-1.968l4.152,4.776c0.369,0.424,0.326,1.044-0.096,1.411l-1.227,1.066 c-0.299,0.26-0.417,0.671-0.3,1.049c2.092,6.798,6.16,8.133,9.13,9.108l0.433,0.143c0.433,0.146,0.907-0.021,1.155-0.403 l0.709-1.092c0.146-0.226,0.37-0.379,0.63-0.434c0.261-0.056,0.527-0.004,0.753,0.143l5.308,3.447L35.91,34.142z">
-                                            </path>
-                                            <path
-                                                d="M28.538,16.247c-0.532-0.153-1.085,0.156-1.236,0.688c-0.151,0.531,0.157,1.084,0.688,1.235 c1.49,0.424,2.677,1.613,3.097,3.104c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.702,0.691-1.234C32.405,18.578,30.69,16.859,28.538,16.247z">
-                                            </path>
-                                            <path
-                                                d="M36.148,22.219c0.09,0,0.181-0.012,0.272-0.037c0.532-0.15,0.841-0.703,0.691-1.234c-1.18-4.183-4.509-7.519-8.689-8.709 c-0.531-0.153-1.084,0.158-1.235,0.689c-0.151,0.531,0.157,1.084,0.688,1.235c3.517,1,6.318,3.809,7.311,7.328 C35.311,21.931,35.711,22.219,36.148,22.219z">
-                                            </path>
-                                            <path
-                                                d="M27.991,7.582c-0.532-0.153-1.085,0.156-1.236,0.689c-0.151,0.531,0.157,1.084,0.688,1.235 c5.959,1.695,10.706,6.453,12.388,12.416c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.703,0.691-1.234C39.887,14.753,34.613,9.467,27.991,7.582z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="social-icon whatsApp">
-                        <a href="https://wa.me/+39 388 8730735" target="_blank">
-                            <svg height="32px" width="32px" fill="#fff" viewBox="-2 -2 24 24"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
-                                class="jam jam-whatsapp">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z">
-                                    </path>
-                                    <path
-                                        d="M14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z">
-                                    </path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+      <div class="wrapper">
+        <div class="container">
+          <div class="copyright">© YouDent 2024</div>
+          <div class="socials">
+            <div class="social-icon facebook">
+              <a href="https://www.facebook.com/mykolatsidylo" target="_blank">
+                <svg
+                  fill="#ffffff"
+                  width="32px"
+                  height="32px"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"
+                    />
+                  </g>
+                </svg>
+              </a>
             </div>
+            <div class="social-icon instagram">
+              <a
+                href="https://www.instagram.com/dott.mykola.tsidylo/"
+                target="_blank"
+              >
+                <svg
+                  fill="#ffffff"
+                  width="32px"
+                  height="32px"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
+                    />
+                    <path
+                      d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div class="social-icon telegram">
+              <a href="https://t.me/+39 388 8730735" target="_blank">
+                <svg
+                  fill="#ffffff"
+                  width="28px"
+                  height="28px"
+                  viewBox="0 0 24 24"
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffffff"
+                  stroke-width="0.00024000000000000003"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#CCCCCC"
+                    stroke-width="0.336"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>telegram</title>
+                    <path
+                      d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div class="social-icon viber">
+              <a href="viber://chat?number=+39 388 8730735" target="_blank">
+                <svg
+                  fill="#ffffff"
+                  height="32px"
+                  width="32px"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="-3.15 -3.15 58.81 58.81"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="1.8903960000000002"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <g>
+                        <path
+                          d="M31.256,0H21.254C10.778,0,2.255,8.521,2.255,18.995v9.01c0,7.8,4.793,14.81,12,17.665v5.841 c0,0.396,0.233,0.754,0.595,0.914c0.13,0.058,0.268,0.086,0.405,0.086c0.243,0,0.484-0.089,0.671-0.259L21.725,47h9.531 c10.476,0,18.999-8.521,18.999-18.995v-9.01C50.255,8.521,41.732,0,31.256,0z M48.255,28.005C48.255,37.376,40.63,45,31.256,45 h-9.917c-0.248,0-0.487,0.092-0.671,0.259l-4.413,3.997v-4.279c0-0.424-0.267-0.802-0.667-0.942 C8.81,41.638,4.255,35.196,4.255,28.005v-9.01C4.255,9.624,11.881,2,21.254,2h10.002c9.374,0,16.999,7.624,16.999,16.995V28.005z"
+                        ></path>
+                        <path
+                          d="M39.471,30.493l-6.146-3.992c-0.672-0.437-1.472-0.585-2.255-0.423c-0.784,0.165-1.458,0.628-1.895,1.303l-0.289,0.444 c-2.66-0.879-5.593-2.002-7.349-7.085l0.727-0.632h0c1.248-1.085,1.379-2.983,0.294-4.233l-4.808-5.531 c-0.362-0.417-0.994-0.46-1.411-0.099l-3.019,2.624c-2.648,2.302-1.411,5.707-1.004,6.826c0.018,0.05,0.04,0.098,0.066,0.145 c0.105,0.188,2.612,4.662,6.661,8.786c4.065,4.141,11.404,7.965,11.629,8.076c0.838,0.544,1.781,0.805,2.714,0.805 c1.638,0,3.244-0.803,4.202-2.275l2.178-3.354C40.066,31.413,39.934,30.794,39.471,30.493z M35.91,34.142 c-0.901,1.388-2.763,1.782-4.233,0.834c-0.073-0.038-7.364-3.835-11.207-7.75c-3.592-3.659-5.977-7.724-6.302-8.291 c-0.792-2.221-0.652-3.586,0.464-4.556l2.265-1.968l4.152,4.776c0.369,0.424,0.326,1.044-0.096,1.411l-1.227,1.066 c-0.299,0.26-0.417,0.671-0.3,1.049c2.092,6.798,6.16,8.133,9.13,9.108l0.433,0.143c0.433,0.146,0.907-0.021,1.155-0.403 l0.709-1.092c0.146-0.226,0.37-0.379,0.63-0.434c0.261-0.056,0.527-0.004,0.753,0.143l5.308,3.447L35.91,34.142z"
+                        ></path>
+                        <path
+                          d="M28.538,16.247c-0.532-0.153-1.085,0.156-1.236,0.688c-0.151,0.531,0.157,1.084,0.688,1.235 c1.49,0.424,2.677,1.613,3.097,3.104c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.702,0.691-1.234C32.405,18.578,30.69,16.859,28.538,16.247z"
+                        ></path>
+                        <path
+                          d="M36.148,22.219c0.09,0,0.181-0.012,0.272-0.037c0.532-0.15,0.841-0.703,0.691-1.234c-1.18-4.183-4.509-7.519-8.689-8.709 c-0.531-0.153-1.084,0.158-1.235,0.689c-0.151,0.531,0.157,1.084,0.688,1.235c3.517,1,6.318,3.809,7.311,7.328 C35.311,21.931,35.711,22.219,36.148,22.219z"
+                        ></path>
+                        <path
+                          d="M27.991,7.582c-0.532-0.153-1.085,0.156-1.236,0.689c-0.151,0.531,0.157,1.084,0.688,1.235 c5.959,1.695,10.706,6.453,12.388,12.416c0.124,0.44,0.525,0.729,0.962,0.729c0.09,0,0.181-0.012,0.272-0.037 c0.531-0.15,0.841-0.703,0.691-1.234C39.887,14.753,34.613,9.467,27.991,7.582z"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+
+            <div class="social-icon whatsApp">
+              <a href="https://wa.me/+39 388 8730735" target="_blank">
+                <svg
+                  height="32px"
+                  width="32px"
+                  fill="#fff"
+                  viewBox="-2 -2 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMinYMin"
+                  class="jam jam-whatsapp"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z"
+                    ></path>
+                    <path
+                      d="M14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="popup-gallery/jquery.magnific-popup.js"></script>
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
