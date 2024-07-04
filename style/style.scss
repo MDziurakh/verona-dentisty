@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,13 +30,10 @@ ol {
     margin: 0;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 img {
     height: auto;
     width: 100%;
+    vertical-align: top;
 }
 
 a {
@@ -44,28 +45,19 @@ a {
     }
 }
 
-
-$maxContentWidth: 1440px;
-$headerHeight: 100px;
-$scrolledHeaderHeight: 85px;
-$burgerWidth: 60px;
-$darkBlueColor :#1A374C;
-$PrimaryLightBlueColor :#8DB9D8;
-$SecondaryLightBlueColor :#9090aa;
-$greenPrimary: #41B06E;
-
-@import 'palette';
-@import 'anchor';
-@import 'header';
-@import 'hero';
-@import 's-services';
-@import 's-about-us';
-@import 's-gallery';
-@import 's-feedback';
-@import 's-map';
-@import 's-contact-info';
-@import 's-footer';
-@import '_s-sticky-contacts';
+@import 'abstracts/variables';
+@import 'abstracts/palette';
+@import 'sections/s-hero';
+@import 'sections/s-header';
+@import 'sections/s-services';
+@import 'sections/s-about-us';
+@import 'sections/s-gallery';
+@import 'sections/s-feedback';
+@import 'sections/s-map';
+@import 'sections/s-contact-info';
+@import 'sections/s-footer';
+@import 'sections/s-sticky-contacts';
+@import 'components/anchor';
 @import 'components/_c-mobile-menu';
 @import 'components/_c-burger';
 @import 'components/_c-full-menu';
@@ -121,14 +113,14 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #275372;
+    background-color: $primary70;
     border-radius: 10px;
     border: 3px solid $default10 ;
 }
 
 html {
     scrollbar-width: thin;
-    scrollbar-color: #275372 $default10 ;
+    scrollbar-color: $primary70 $default10;
 }
 
 body {
