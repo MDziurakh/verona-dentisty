@@ -21,6 +21,12 @@
     align-items: center;
     gap: 12px;
 
+    a,
+    div {
+        color: $primary70;
+
+    }
+
     a {
         height: 100%;
         display: flex;
@@ -37,13 +43,11 @@
 
     p {
         font-size: 16px;
-        color: $primary70;
     }
 
-    &:hover {
-        a p {
-            text-decoration: underline;
-        }
+    a:hover {
+        text-decoration: underline;
+
     }
 
     @media (min-width:768px) {

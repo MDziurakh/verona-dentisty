@@ -369,6 +369,10 @@ header.scrolled .logo-wrapper {
   align-items: center;
   gap: 12px;
 }
+.info-item a,
+.info-item div {
+  color: #275372;
+}
 .info-item a {
   height: 100%;
   display: flex;
@@ -383,9 +387,8 @@ header.scrolled .logo-wrapper {
 }
 .info-item p {
   font-size: 16px;
-  color: #275372;
 }
-.info-item:hover a p {
+.info-item a:hover {
   text-decoration: underline;
 }
 @media (min-width: 768px) {
@@ -482,8 +485,8 @@ footer .container {
 
 .sticky-contacts {
   position: fixed;
-  top: 80%;
-  left: calc(100% - var(--opener-size));
+  bottom: 120px;
+  right: 0;
   z-index: 400;
   max-width: -moz-max-content;
   max-width: max-content;
