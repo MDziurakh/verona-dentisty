@@ -8,13 +8,14 @@
     opacity: 0;
     pointer-events: none;
     max-height: 0;
-    transition: all .4s ease;
 
 
     &.open {
         max-height: none;
         pointer-events: all;
         opacity: 1;
+        transition: all .2s ease-in;
+
 
         @media (min-width:768px) {
             display: none;
@@ -31,7 +32,7 @@
     .menu-container {
         width: 100%;
         max-width: 320px;
-        padding: 0 20px;
+        padding: 0 calc(20px + var(--scrollbar-width)) 0 20px;
         height: 100%;
         background-color: $primary70;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);

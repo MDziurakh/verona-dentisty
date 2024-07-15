@@ -1,5 +1,5 @@
 .c-form {
-    margin: 40px 0;
+    margin: 40px 0 var(--section-padding-size);
 
     .form-heading {
         color: $primary90;
@@ -143,7 +143,7 @@
     }
 
     .message-label::before {
-        top: 8px;
+        top: 18px;
         margin: unset;
         bottom: unset;
         background-image: url('../assets/icons/message.svg');

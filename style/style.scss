@@ -1,3 +1,13 @@
+:root {
+    --section-padding-size: 20px;
+    --scrollbar-width: 0px;
+
+    @media (min-width:992px) {
+        --section-padding-size: 60px;
+        --scrollbar-width: 12px;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,6 +20,11 @@ body {
     margin: 0;
     font-family: "Noto Sans";
     scroll-behavior: smooth;
+
+    &.no-scroll {
+        overflow: hidden;
+        padding-right: var(--scrollbar-width);
+    }
 }
 
 h1,
@@ -75,16 +90,9 @@ a {
 }
 
 .container {
-    padding: 0 20px;
-
-    @media (min-width:768px) {
-        padding: 0 40px;
-    }
-
-    @media (min-width:992px) {
-        padding: 0 60px;
-    }
+    padding: 0 var(--section-padding-size);
 }
+
 
 .section-padding {
     padding: 40px 0;

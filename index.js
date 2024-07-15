@@ -15,20 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", checkScroll);
 
   checkScroll();
-  // console.log(callMeButton);
   const burgers = document.querySelectorAll(".burger-contain");
+
   if (burgers)
     burgers.forEach((burger) =>
       burger.addEventListener("click", (e) => {
         e.preventDefault();
         mobileMenu.classList.toggle("open");
-        const boei1 = document.querySelector("#boei_close_trigger_message");
-        const boei2 = document.querySelector("#boei_trigger_message");
-        const boei3 = document.querySelector("#boei_button");
-        
-        if (boei1) boei1.classList.toggle("openedMenu");
-        if (boei2) boei2.classList.toggle("openedMenu");
-        if (boei3) boei3.classList.toggle("openedMenu");
+        document.body.classList.toggle("no-scroll");
       })
     );
 
@@ -43,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modalOverlay) {
     modalOverlay.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
-      // callMeButton.classList.remove("open");
+      document.body.classList.remove("no-scroll");
     });
   }
 
@@ -52,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeLinks.forEach((closeLink) => {
       closeLink.addEventListener("click", () => {
         mobileMenu.classList.remove("open");
+        document.body.classList.remove("open");
       });
     });
   }
@@ -106,6 +101,23 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  const stickyContacts = document.querySelector(".sticky-contacts");
+
+  stickyContacts.addEventListener("click", function (e) {
+    stickyContacts.classList.toggle("opened");
+  });
+});
+
+const stickyContacts = document.querySelector(".sticky-contacts");
+const stickyContactsContainer = document.querySelector(
+  ".sticky-contacts__container"
+);
+
+document.addEventListener("click", function (event) {
+  if (!stickyContacts.contains(event.target)) {
+    stickyContacts.classList.remove("opened");
+  }
 });
 
 $(document).ready(function () {
@@ -114,6 +126,14 @@ $(document).ready(function () {
     closeBtnInside: false,
     image: {
       verticalFit: true,
+    },
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      arrowMarkup:
+        '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+      tPrev: "Previous (Left arrow key)",
+      tNext: "Next (Right arrow key)",
     },
   });
 });

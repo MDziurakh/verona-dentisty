@@ -1,6 +1,6 @@
 :root {
     --opener-size: 48px;
-    --sticky-icon-padding: 6px;
+    --sticky-icon-padding: 8px;
 
     @media (min-width:768px) {
         --opener-size: 56px;
@@ -12,15 +12,36 @@
 }
 
 .sticky-contacts {
-    position: sticky;
+    position: fixed;
     top: 80%;
     left: calc(100% - var(--opener-size));
     z-index: 400;
     max-width: max-content;
     display: flex;
+    transition: all .3s ease;
+    cursor: pointer;
 
     img {
         filter: brightness(10);
+    }
+
+    &.opened {
+        .sticky-contacts__opener {
+            background-color: $primary70;
+            transition: all .3s ease;
+            box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .sticky-contacts__content {
+            max-height: 1000px;
+            visibility: visible;
+            box-shadow:
+                -3px -3px 3px rgba(0, 0, 0, 0.2),
+                -3px 0px 3px rgba(0, 0, 0, 0.2),
+                3px 0px 3px rgba(0, 0, 0, 0.2),
+                -6px -6px 6px rgba(0, 0, 0, 0.15),
+                -6px 0px 6px rgba(0, 0, 0, 0.15),
+        }
     }
 }
 
@@ -35,33 +56,12 @@
     cursor: pointer;
     transition: all .3s ease;
     box-shadow: -4px -4px 5px rgba(0, 0, 0, 0.3), -4px 4px 5px rgba(0, 0, 0, 0.3), 4px 4px 5px rgba(0, 0, 0, 0.3), -8px -8px 15px rgba(0, 0, 0, 0.1), -8px 8px 15px rgba(0, 0, 0, 0.1), 8px 8px 15px rgba(0, 0, 0, 0.1);
-
-    &:hover {
-        background-color: $primary70;
-        transition: all .3s ease;
-        box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
-    }
 }
 
-.sticky_contacts__container {
+.sticky-contacts__container {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    min-width: var(--opener-size);
-    position: absolute;
-
-    &:hover {
-        .sticky-contacts__content {
-            max-height: 1000px;
-            visibility: visible;
-            box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.2), -3px 3px 3px rgba(0, 0, 0, 0.2), 3px 3px 3px rgba(0, 0, 0, 0.2), -6px -6px 6px rgba(0, 0, 0, 0.15), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
-        }
-
-        .sticky-contacts__opener {
-            background-color: $primary70;
-            box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.2), -3px 3px 3px rgba(0, 0, 0, 0.2), 3px 3px 3px rgba(0, 0, 0, 0.2), -6px -6px 6px rgba(0, 0, 0, 0.15), -6px 6px 6px rgba(0, 0, 0, 0.15), 6px 6px 6px rgba(0, 0, 0, 0.15);
-        }
-    }
 }
 
 
@@ -73,7 +73,7 @@
     gap: 4px;
     background-color: $primary70;
     max-height: 0;
-    transition: all .5s ease;
+    transition: all .2s ease-out;
     visibility: hidden;
     overflow: hidden;
 
