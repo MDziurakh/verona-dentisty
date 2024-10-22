@@ -1,3 +1,3 @@
-YouDent - https://mdziurakh.github.io/youDent/
+Landing page for Dental Clinic - https://mdziurakh.github.io/youDent/
 
-Landing page created with Scss.
+Stack: HTML, SCSS, JS.
